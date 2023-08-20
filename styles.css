@@ -14,13 +14,12 @@ body {
     margin: 0 auto;
     padding: 0 20px;
 }
-
 /* Navigation bar styles */
 .navbar {
     background-color: #ff8000;
     color: #fff;
     padding: 20px 0;
-    transition: background-color 0.3s;
+    border-bottom: 4px solid #ff6600; /* Add a bottom border for the box effect */
 }
 
 .navbar-brand {
@@ -28,7 +27,6 @@ body {
     font-weight: bold;
     text-decoration: none;
     color: #fff;
-    transition: color 0.3s;
 }
 
 .navbar-nav {
@@ -36,7 +34,6 @@ body {
 }
 
 .navbar-nav li {
-    display: inline;
     margin-right: 20px;
 }
 
@@ -44,17 +41,14 @@ body {
     text-decoration: none;
     color: #fff;
     font-size: 18px;
-    transition: color 0.3s;
+    padding: 10px 20px; /* Add padding to create a box effect */
+    border-radius: 5px; /* Add rounded corners */
+    transition: background-color 0.3s; /* Smooth background color transition */
 }
 
 .navbar-nav a:hover {
-    color: #ff6600;
+    background-color: #ff6600;
 }
-
-.navbar-toggler-icon {
-    border-color: #fff;
-}
-
 /* Header section styles */
 #header {
     background-color: #fff;
