@@ -8,7 +8,7 @@ document.addEventListener("DOMContentLoaded", function() {
     // Fetch project data from GitHub (Replace with your own API endpoint)
     async function fetchProjects() {
         try {
-            const response = await fetch("https://api.github.com/users/your-username/repos");
+            const response = await fetch("https://api.github.com/users/omarmoukawim/repos");
             const projects = await response.json();
             return projects;
         } catch (error) {
