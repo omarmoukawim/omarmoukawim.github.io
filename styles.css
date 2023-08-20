@@ -1,30 +1,54 @@
-/* Reset default margin */
-body, h1, h2, h3, h4, h5, h6, p {
+/* Reset some default styles */
+body, h1, h2, h3, h4, h5, p, ul {
     margin: 0;
     padding: 0;
 }
 
-/* Global styling */
 body {
     font-family: Arial, sans-serif;
 }
 
-/* Header styling */
-.header {
-    padding: 80px 0;
-    text-align: center;
+/* Global styles */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
 }
 
-.header h1 {
-    font-size: 36px;
+/* Navigation bar styles */
+.navbar {
+    background-color: #343a40;
+    color: #fff;
+    padding: 20px 0;
+}
+
+.navbar-brand {
+    font-size: 24px;
     font-weight: bold;
-    margin-bottom: 10px;
+    text-decoration: none;
+    color: #fff;
 }
 
-.header p {
+.navbar-nav {
+    list-style: none;
+}
+
+.navbar-nav li {
+    display: inline;
+    margin-right: 20px;
+}
+
+.navbar-nav a {
+    text-decoration: none;
+    color: #fff;
     font-size: 18px;
-    color: #555;
-    margin-bottom: 20px;
+}
+
+/* Header section styles */
+#header {
+    background-color: #f8f9fa;
+    padding: 100px 0;
+    text-align: center;
 }
 
 .profile-picture {
@@ -34,45 +58,63 @@ body {
     border-radius: 50%;
 }
 
+h1 {
+    font-size: 36px;
+    margin-top: 20px;
+}
+
+p {
+    font-size: 18px;
+    color: #555;
+    margin-top: 10px;
+}
+
 .social-icons {
     margin-top: 20px;
 }
 
-.social-icon {
+.social-icons a {
     font-size: 24px;
-    color: #333;
+    color: #007bff;
     margin-right: 15px;
+    text-decoration: none;
     transition: color 0.3s;
 }
 
-.social-icon:hover {
-    color: #007bff;
+.social-icons a:hover {
+    color: #0056b3;
 }
 
-/* Section header styling */
-.section-header {
-    padding: 40px 0;
+/* Section title styles */
+section {
+    padding: 80px 0;
+}
+
+h2 {
+    font-size: 30px;
     text-align: center;
-    background-color: #f8f9fa;
-    border-bottom: 1px solid #ccc;
+    margin-bottom: 30px;
 }
 
-.section-header h2 {
-    font-size: 28px;
-    margin-bottom: 10px;
+/* Project slider styles */
+.project-slider {
+    display: flex;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    -webkit-overflow-scrolling: touch;
 }
 
-/* Project card styling */
 .project-card {
+    flex: 0 0 300px;
     background-color: #fff;
     border: 1px solid #ddd;
     border-radius: 5px;
     padding: 20px;
-    margin-bottom: 20px;
+    margin-right: 20px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-.project-card h5 {
+.project-card h3 {
     font-size: 24px;
     margin-bottom: 10px;
 }
@@ -97,50 +139,82 @@ body {
     background-color: #0056b3;
 }
 
-/* Contact section styling */
-.contact-section {
-    background-color: #f8f9fa;
-    padding: 80px 0;
+/* Skills list styles */
+.skills-list ul {
+    list-style: none;
+    padding-left: 0;
 }
 
-.contact-section h2 {
-    font-size: 28px;
-    text-align: center;
-    margin-bottom: 30px;
+.skills-list li {
+    font-size: 18px;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+/* About section styles */
+#about {
+    background-color: #f8f9fa;
+}
+
+/* Contact section styles */
+#contact {
+    background-color: #343a40;
+    color: #fff;
 }
 
 .contact-info {
-    margin-bottom: 30px;
+    list-style: none;
+    padding-left: 0;
+    font-size: 18px;
+    margin-top: 20px;
 }
 
-.contact-info h4 {
-    font-size: 24px;
+.contact-info li {
     margin-bottom: 10px;
 }
 
 .contact-info i {
-    font-size: 18px;
     margin-right: 10px;
-    color: #007bff;
 }
 
-/* Footer styling */
-.footer {
+/* Footer styles */
+footer {
     background-color: #343a40;
     color: #fff;
-    padding: 20px 0;
     text-align: center;
+    padding: 20px 0;
 }
 
-/* Responsive styles */
+/* Media queries */
 @media (max-width: 768px) {
-    .header {
-        padding: 50px 0;
+    .navbar {
+        padding: 10px 0;
     }
 
-    .profile-picture {
-        width: 150px;
-        height: 150px;
+    .navbar-nav {
+        text-align: center;
+    }
+
+    .navbar-nav li {
+        display: block;
+        margin-bottom: 10px;
+    }
+
+    .navbar-toggler-icon {
+        background-color: #fff;
+    }
+
+    .social-icons {
+        margin-top: 10px;
+    }
+
+    .project-slider {
+        flex-wrap: nowrap;
+        overflow-x: scroll;
+    }
+
+    .project-card {
+        flex: 0 0 auto;
+        margin-right: 10px;
     }
 }
-
