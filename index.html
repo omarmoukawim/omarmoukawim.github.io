@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -36,7 +37,7 @@
     </nav>
 
     <section id="header" class="header">
-        <div class="container">
+        <div class="container text-center">
             <img src="your-profile-picture.jpg" alt="Your Name" class="rounded-circle profile-picture">
             <h1 class="display-4">Your Name</h1>
             <p class="lead">Advanced Programmer & Control System Engineer</p>
@@ -50,7 +51,7 @@
     <section id="projects">
         <div class="container">
             <h2 class="section-header text-center mb-5">Projects</h2>
-            <div class="project-slider" id="project-list">
+            <div class="row project-list" id="project-list">
                 <!-- Dynamic project cards will be added here by JavaScript -->
             </div>
         </div>
@@ -60,19 +61,38 @@
         <div class="container">
             <h2 class="section-header text-center mb-5">Skills</h2>
             <div class="row skills-list">
-                <div class="col-md-6">
-                    <ul>
-                        <li>Languages: Placeholder</li>
-                        <li>Placeholder</li>
-                        <li>Placeholder</li>
-                    </ul>
+                <div class="col-md-4">
+                    <div class="skill-card">
+                        <h4>Languages</h4>
+                        <ul>
+                            <li>Python</li>
+                            <li>JavaScript</li>
+                            <li>C++</li>
+                            <!-- Add more languages -->
+                        </ul>
+                    </div>
                 </div>
-                <div class="col-md-6">
-                    <ul>
-                        <li>Technologies: Placeholder</li>
-                        <li>Placeholder</li>
-                        <li>Placeholder</li>
-                    </ul>
+                <div class="col-md-4">
+                    <div class="skill-card">
+                        <h4>Technologies</h4>
+                        <ul>
+                            <li>Machine Learning</li>
+                            <li>Web Development</li>
+                            <li>Database Management</li>
+                            <!-- Add more technologies -->
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="skill-card">
+                        <h4>Frameworks</h4>
+                        <ul>
+                            <li>React</li>
+                            <li>Node.js</li>
+                            <li>Bootstrap</li>
+                            <!-- Add more frameworks -->
+                        </ul>
+                    </div>
                 </div>
             </div>
         </div>
@@ -110,7 +130,7 @@
                 </div>
                 <div class="col-md-6">
                     <h4>Contact Information</h4>
-                    <ul class="contact-info">
+                    <ul class="list-unstyled">
                         <li><i class="fas fa-envelope"></i> Email: your.email@example.com</li>
                         <li><i class="fas fa-phone"></i> Phone: +123 456 7890</li>
                         <li><i class="fas fa-map-marker-alt"></i> Location: Your City, Country</li>
@@ -132,3 +152,4 @@
     <script src="scripts.js"></script>
 </body>
 </html>
+
