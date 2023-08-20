@@ -20,6 +20,7 @@ body {
     background-color: #ff8000;
     color: #fff;
     padding: 20px 0;
+    transition: background-color 0.3s;
 }
 
 .navbar-brand {
@@ -27,6 +28,7 @@ body {
     font-weight: bold;
     text-decoration: none;
     color: #fff;
+    transition: color 0.3s;
 }
 
 .navbar-nav {
@@ -42,6 +44,15 @@ body {
     text-decoration: none;
     color: #fff;
     font-size: 18px;
+    transition: color 0.3s;
+}
+
+.navbar-nav a:hover {
+    color: #ff6600;
+}
+
+.navbar-toggler-icon {
+    border-color: #fff;
 }
 
 /* Header section styles */
@@ -137,15 +148,30 @@ p {
     text-align: center;
 }
 
-.skills-list ul {
-    list-style: none;
-    padding-left: 0;
+.skills-list {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
 }
 
-.skills-list li {
+.skill {
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 15px 20px;
+    margin: 10px;
+    text-align: center;
+}
+
+.skill-icon {
+    font-size: 36px;
+    color: #ff8000;
+    margin-bottom: 10px;
+}
+
+.skill-name {
     font-size: 18px;
     color: #333;
-    margin-bottom: 10px;
 }
 
 /* About section styles */
@@ -188,30 +214,5 @@ footer {
 
 /* Media queries */
 @media (max-width: 768px) {
-    .navbar {
-        padding: 10px 0;
-    }
-
-    .navbar-nav {
-        text-align: center;
-    }
-
-    .navbar-nav li {
-        display: block;
-        margin-bottom: 10px;
-    }
-
-    .social-icons {
-        margin-top: 10px;
-    }
-
-    .project-slider {
-        flex-wrap: nowrap;
-        overflow-x: scroll;
-    }
-
-    .project-card {
-        flex: 0 0 auto;
-        margin-right: 10px;
-    }
+    /* Add your media query styles here */
 }
