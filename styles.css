@@ -31,7 +31,7 @@ h3 {
 
 /* Header */
 header {
-    background-color: #333;
+    background-color: #283593; /* Indigo */
     color: white;
     padding: 1rem 0;
 }
@@ -83,7 +83,7 @@ nav ul li a:hover {
 
 .project-card a {
     display: inline-block;
-    background-color: #333;
+    background-color: #283593; /* Indigo */
     color: white;
     padding: 8px 16px;
     border-radius: 4px;
@@ -92,13 +92,40 @@ nav ul li a:hover {
 }
 
 .project-card a:hover {
-    background-color: #555;
+    background-color: #001F3F; /* Darker Indigo */
+}
+
+/* Skills section */
+#skills ul.list-group {
+    padding: 0;
+}
+
+#skills ul.list-group li {
+    font-size: 1.2rem;
+    border: none;
+    background-color: transparent;
+}
+
+/* About section */
+#about p {
+    font-size: 1.2rem;
+    line-height: 1.6;
+}
+
+/* Contact section */
+#contact ul.list-unstyled {
+    font-size: 1.2rem;
+    list-style: none;
+}
+
+#contact ul.list-unstyled li {
+    margin-bottom: 10px;
 }
 
 /* Footer */
 footer {
     text-align: center;
     padding: 1rem 0;
-    background-color: #333;
+    background-color: #283593; /* Indigo */
     color: white;
 }
