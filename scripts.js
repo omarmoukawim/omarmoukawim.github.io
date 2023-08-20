@@ -1,41 +1,44 @@
-const projectList = document.getElementById('project-list');
+// Function to fetch data from GitHub API and generate project cards
+async function generateProjectCards() {
+    const projectList = document.getElementById("project-list");
 
+    try {
+        const response = await fetch("https://api.github.com/users/your-username/repos");
+        const repos = await response.json();
 
-const githubUsername = 'omarmoukawim';
+        repos.forEach(repo => {
+            if (!repo.fork) { // Exclude forked repositories
+                const projectCard = document.createElement("div");
+                projectCard.className = "col-md-6";
 
-        // JavaScript code for fetching GitHub projects
-        fetch('https://api.github.com/users/omarmoukawim/repos?sort=created&per_page=6')
-            .then(response => response.json())
-            .then(data => {
-                const projectList = document.getElementById('project-list');
+                const cardContent = `
+                    <div class="project-card">
+                        <h5>${repo.name}</h5>
+                        <p>${repo.description || "No description available."}</p>
+                        <a href="${repo.html_url}" target="_blank">View Project</a>
+                    </div>
+                `;
 
-                data.forEach(repo => {
-                    fetch(`https://api.github.com/repos/omarmoukawim/${repo.name}/readme`)
-                        .then(response => response.json())
-                        .then(readmeData => {
-                            const readmeContent = window.atob(readmeData.content.replace(/\s/g, ''));
-                            const card = document.createElement('div');
-                            card.classList.add('col-md-4', 'project-card');
-                            card.innerHTML = `
-                                <h5>${repo.name}</h5>
-                                <p>${readmeContent ? readmeContent : 'No description available.'}</p>
-                                <a href="${repo.html_url}" target="_blank" class="btn btn-dark">View Repo</a>
-                            `;
-                            projectList.appendChild(card);
-                        })
-                        .catch(error => console.error('Error fetching README:', error));
-                });
-            })
-            .catch(error => console.error('Error fetching projects:', error));
+                projectCard.innerHTML = cardContent;
+                projectList.appendChild(projectCard);
+            }
+        });
+    } catch (error) {
+        console.error("Error fetching GitHub data:", error);
+    }
+}
 
-
-// Smooth scrolling behavior for navigation links
-document.querySelectorAll('nav a').forEach(anchor => {
-    anchor.addEventListener('click', function (e) {
-        e.preventDefault();
-
-        document.querySelector(this.getAttribute('href')).scrollIntoView({
-            behavior: 'smooth'
+// Smooth scrolling for navigation links
+document.addEventListener("DOMContentLoaded", () => {
+    const navLinks = document.querySelectorAll(".navbar-nav .nav-link");
+    navLinks.forEach(link => {
+        link.addEventListener("click", (e) => {
+            e.preventDefault();
+            const targetId = link.getAttribute("href");
+            document.querySelector(targetId).scrollIntoView({ behavior: "smooth" });
         });
     });
+
+    // Call the function to generate project cards
+    generateProjectCards();
 });
