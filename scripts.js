@@ -3,7 +3,7 @@ const projectList = document.getElementById("project-list");
 
 const fetchProjects = async () => {
     try {
-        const response = await fetch("https://api.github.com/users/your-username/repos");
+        const response = await fetch("https://api.github.com/users/omarmoukawim/repos");
         const data = await response.json();
 
         const projects = data.filter(repo => !repo.fork);
