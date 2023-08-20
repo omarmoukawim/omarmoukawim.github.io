@@ -3,123 +3,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Omar Moukawim's Portfolio 👋</title>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     <link rel="stylesheet" href="styles.css">
-    <style>
-        /* Custom styles */
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f8f9fa;
-            color: #333;
-        }
-        .navbar {
-            background-color: #343a40;
-            border-bottom: 3px solid #d9534f;
-            position: fixed;
-            width: 100%;
-            top: 0;
-            z-index: 1000;
-        }
-        .navbar-brand {
-            color: #fff;
-            font-size: 24px;
-            font-weight: bold;
-        }
-        .navbar-nav .nav-link {
-            color: #fff;
-            font-size: 16px;
-            transition: color 0.3s;
-        }
-        .navbar-nav .nav-link:hover {
-            color: #d9534f;
-        }
-        .navbar-nav .nav-link:focus {
-            color: #d9534f;
-            outline: none;
-        }
-        .header {
-            background-color: #343a40;
-            color: #fff;
-            padding: 50px 0;
-            text-align: center;
-        }
-        .header h1 {
-            margin-bottom: 10px;
-        }
-        .header p {
-            font-size: 18px;
-            margin-bottom: 20px;
-        }
-        .section-header {
-            background-color: #d9534f;
-            color: #fff;
-            padding: 40px 0;
-            text-align: center;
-        }
-        .section-header h2 {
-            margin-bottom: 10px;
-        }
-        .profile-picture {
-            border: 5px solid white;
-            margin-bottom: 20px;
-            width: 150px;
-            height: 150px;
-            object-fit: cover;
-            border-radius: 50%;
-        }
-        .social-icons {
-            display: flex;
-            justify-content: center;
-            margin-top: 20px;
-        }
-        .social-icon {
-            font-size: 24px;
-            color: #d9534f;
-            margin: 0 10px;
-            transition: color 0.3s;
-        }
-        .social-icon:hover {
-            color: #c9302c;
-        }
-        .project-card {
-            background-color: #fff;
-            border: 1px solid #ccc;
-            padding: 20px;
-            margin-bottom: 20px;
-            border-radius: 5px;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-            transition: transform 0.3s;
-        }
-        .project-card h5 {
-            margin-bottom: 10px;
-            font-size: 20px;
-        }
-        .project-card p {
-            font-size: 16px;
-            margin-bottom: 15px;
-        }
-        .project-card a {
-            display: inline-block;
-            padding: 8px 12px;
-            background-color: #d9534f;
-            color: #fff;
-            text-decoration: none;
-            border-radius: 4px;
-            transition: background-color 0.3s;
-        }
-        .project-card a:hover {
-            background-color: #c9302c;
-        }
-        .project-card:hover {
-            transform: translateY(-5px);
-        }
-    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
 </head>
 <body>
     <nav class="navbar navbar-expand-lg navbar-dark">
         <div class="container">
-            <a class="navbar-brand" href="#">Your Portfolio</a>
+            <a class="navbar-brand" href="#header">Omar Moukawim's Portfolio 👋</a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -142,49 +32,28 @@
         </div>
     </nav>
 
-    <section class="header">
+    <section id="header" class="header">
         <div class="container">
-            <img src="your-profile-picture.jpg" alt="Your Name" class="rounded-circle profile-picture">
-            <h1 class="display-4">Your Name</h1>
+            <img src="images/profile-picture.jpg" alt="Omar Moukawim" class="rounded-circle profile-picture">
+            <h1 class="display-4">Omar Moukawim</h1>
             <p class="lead">Advanced Programmer & Control System Engineer</p>
             <div class="social-icons">
-                <a href="https://github.com/your-username" target="_blank" class="social-icon"><i class="fab fa-github"></i></a>
-                <a href="https://www.linkedin.com/in/your-username" target="_blank" class="social-icon"><i class="fab fa-linkedin"></i></a>
+                <a href="https://github.com/omarmoukawim" target="_blank" class="social-icon"><i class="fab fa-github"></i></a>
+                <a href="https://www.linkedin.com/in/omarmoukawim" target="_blank" class="social-icon"><i class="fab fa-linkedin"></i></a>
             </div>
         </div>
     </section>
 
-    <section id="projects">
+    <section id="projects" class="projects">
         <div class="container">
             <h2 class="section-header text-center mb-5">Projects</h2>
             <div class="row" id="project-list">
                 <!-- Dynamic project cards will be added here -->
-                <div class="col-md-4">
-                    <div class="project-card">
-                        <h5>Project Name 1</h5>
-                        <p>Description of the project goes here.</p>
-                        <a href="#" class="btn btn-dark">View Repo</a>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="project-card">
-                        <h5>Project Name 2</h5>
-                        <p>Description of the project goes here.</p>
-                        <a href="#" class="btn btn-dark">View Repo</a>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="project-card">
-                        <h5>Project Name 3</h5>
-                        <p>Description of the project goes here.</p>
-                        <a href="#" class="btn btn-dark">View Repo</a>
-                    </div>
-                </div>
             </div>
         </div>
     </section>
 
-    <section id="skills" class="bg-light py-5">
+    <section id="skills" class="skills bg-light py-5">
         <div class="container">
             <h2 class="section-header text-center mb-5">Skills</h2>
             <div class="row">
@@ -210,27 +79,27 @@
         </div>
     </section>
 
-    <section id="about" class="py-5">
+    <section id="about" class="about py-5">
         <div class="container">
             <h2 class="section-header text-center mb-5">About Me</h2>
             <div class="row">
                 <div class="col-md-6">
                     <h4>Who am I?</h4>
                     <p>
-                        Write a brief introduction about yourself, your background, and your passion for control system engineering and programming.
+                        I am a passionate control system engineer and advanced programmer with a strong background in designing and implementing complex control systems.
                     </p>
                 </div>
                 <div class="col-md-6">
                     <h4>My Interests</h4>
                     <p>
-                        Share your interests, hobbies, and activities that inspire you both in and outside of your work.
+                        I am interested in exploring the intersections between control theory and modern software development. When I'm not coding, I enjoy hiking and playing the guitar.
                     </p>
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="contact" class="bg-light py-5">
+    <section id="contact" class="contact bg-light py-5">
         <div class="container">
             <h2 class="section-header text-center mb-5">Contact Me</h2>
             <div class="row">
@@ -243,7 +112,7 @@
                 <div class="col-md-6">
                     <h4>Contact Information</h4>
                     <ul class="list-unstyled">
-                        <li><i class="fas fa-envelope"></i> Email: your.email@example.com</li>
+                        <li><i class="fas fa-envelope"></i> Email: omar@example.com</li>
                         <li><i class="fas fa-phone"></i> Phone: +123 456 7890</li>
                         <li><i class="fas fa-map-marker-alt"></i> Location: Your City, Country</li>
                     </ul>
@@ -252,17 +121,12 @@
         </div>
     </section>
 
-    <footer class="bg-dark text-white py-3">
+    <footer class="footer bg-dark text-white py-3">
         <div class="container text-center">
-            <p>&copy; 2023 Your Name. All rights reserved.</p>
+            <p>&copy; 2023 Omar Moukawim. All rights reserved.</p>
         </div>
     </footer>
 
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="scripts.js"></script>
 </body>
 </html>
-
-
-
