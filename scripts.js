@@ -4,14 +4,14 @@ const projectList = document.getElementById('project-list');
 const githubUsername = 'omarmoukawim';
 
 // Fetch and display GitHub projects
-fetch('https://api.github.com/users/${githubUsername}/repos?sort=created&per_page=6')
+fetch('https://api.github.com/users/omarmoukawim/repos?sort=created&per_page=6')
     .then(response => response.json())
     .then(data => {
         const projectList = document.getElementById('project-list');
 
         data.forEach(repo => {
             // Fetch README content
-            fetch(`https://api.github.com/repos/${githubUsername}/${repo.name}/readme`)
+            fetch(`https://api.github.com/repos/omarmoukawim/${repo.name}/readme`)
                 .then(response => response.json())
                 .then(readmeData => {
                     const card = document.createElement('div');
