@@ -1,131 +1,182 @@
-/* Reset some default styles */
-body, h1, h2, h3, p, ul, li {
+/* Custom styles */
+
+/* Reset some default margin and padding */
+body, h1, h2, h3, h4, h5, h6, p {
     margin: 0;
     padding: 0;
 }
 
-/* Typography */
 body {
-    font-family: 'Arial', sans-serif;
-    font-size: 16px;
+    font-family: Arial, sans-serif;
     line-height: 1.6;
+}
+
+a {
+    text-decoration: none;
     color: #333;
 }
 
-h1, h2, h3 {
-    font-family: 'Helvetica', sans-serif;
-    margin-bottom: 1rem;
+a:hover {
+    color: #d9534f;
 }
 
-h1 {
-    font-size: 2.5rem;
+/* Navbar */
+.navbar {
+    background-color: #343a40;
+    border-bottom: 3px solid #d9534f;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
 }
 
-h2 {
-    font-size: 2rem;
+.navbar-brand {
+    color: #fff;
+    font-size: 24px;
+    font-weight: bold;
 }
 
-h3 {
-    font-size: 1.8rem;
+.navbar-toggler-icon {
+    background-color: #fff;
 }
 
-/* Header */
-header {
-    background-color: #283593; /* Indigo */
-    color: white;
-    padding: 1rem 0;
+.navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
+    background-color: #d9534f;
 }
 
-/* Navigation */
-nav ul {
-    list-style: none;
-    display: flex;
-}
-
-nav ul li {
-    margin-right: 20px;
-}
-
-nav ul li a {
-    text-decoration: none;
-    color: white;
+.navbar-nav .nav-link {
+    color: #fff;
+    font-size: 16px;
     transition: color 0.3s;
 }
 
-nav ul li a:hover {
-    color: #FF5733;
+.navbar-nav .nav-link:hover {
+    color: #d9534f;
 }
 
-/* Project Cards */
-.project-card {
-    background-color: white;
-    padding: 1.5rem;
-    border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+/* Header */
+.header {
+    background-color: #343a40;
+    color: #fff;
+    padding: 100px 0;
+    text-align: center;
+}
+
+.header h1 {
+    margin-bottom: 10px;
+    font-size: 48px;
+}
+
+.header p {
+    font-size: 20px;
     margin-bottom: 20px;
-    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+}
+
+.profile-picture {
+    border: 5px solid white;
+    margin-bottom: 20px;
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.social-icons {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.social-icon {
+    font-size: 24px;
+    color: #d9534f;
+    margin: 0 10px;
+    transition: color 0.3s;
+}
+
+.social-icon:hover {
+    color: #c9302c;
+}
+
+/* Projects */
+.projects {
+    padding: 100px 0;
+}
+
+.project-card {
+    background-color: #fff;
+    border: 1px solid #ccc;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s;
 }
 
 .project-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 .project-card h5 {
-    font-size: 1.5rem;
     margin-bottom: 10px;
+    font-size: 20px;
 }
 
 .project-card p {
-    color: #666;
-    margin-bottom: 10px;
+    font-size: 16px;
+    margin-bottom: 15px;
 }
 
 .project-card a {
     display: inline-block;
-    background-color: #283593; /* Indigo */
-    color: white;
-    padding: 8px 16px;
-    border-radius: 4px;
+    padding: 8px 12px;
+    background-color: #d9534f;
+    color: #fff;
     text-decoration: none;
-    transition: background-color 0.2s ease-in-out;
+    border-radius: 4px;
+    transition: background-color 0.3s;
 }
 
 .project-card a:hover {
-    background-color: #001F3F; /* Darker Indigo */
+    background-color: #c9302c;
 }
 
-/* Skills section */
-#skills ul.list-group {
-    padding: 0;
+/* Skills */
+.skills {
+    padding: 100px 0;
 }
 
-#skills ul.list-group li {
-    font-size: 1.2rem;
-    border: none;
-    background-color: transparent;
+.skills h4 {
+    font-size: 24px;
+    margin-bottom: 15px;
 }
 
-/* About section */
-#about p {
-    font-size: 1.2rem;
-    line-height: 1.6;
-}
-
-/* Contact section */
-#contact ul.list-unstyled {
-    font-size: 1.2rem;
+.skills ul {
     list-style: none;
 }
 
-#contact ul.list-unstyled li {
+/* About */
+.about {
+    padding: 100px 0;
+}
+
+/* Contact */
+.contact {
+    padding: 100px 0;
+}
+
+.contact ul {
+    list-style: none;
+}
+
+.contact li {
     margin-bottom: 10px;
 }
 
 /* Footer */
-footer {
+.footer {
+    background-color: #343a40;
+    color: #fff;
     text-align: center;
-    padding: 1rem 0;
-    background-color: #283593; /* Indigo */
-    color: white;
+    padding: 20px 0;
 }
