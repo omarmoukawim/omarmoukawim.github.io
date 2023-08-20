@@ -1,30 +1,26 @@
-// Fetch and display project data from GitHub
-const projectList = document.getElementById("project-list");
+document.addEventListener("DOMContentLoaded", function () {
+  // Fetch project data from your GitHub repository
+  fetch("https://api.github.com/users/your-username/repos")
+    .then((response) => response.json())
+    .then((data) => {
+      const projectList = document.getElementById("project-list");
 
-const fetchProjects = async () => {
-    try {
-        const response = await fetch("https://api.github.com/users/omarmoukawim/repos");
-        const data = await response.json();
+      data.forEach((repo) => {
+        const projectCard = document.createElement("div");
+        projectCard.classList.add("col-md-4", "project-card");
 
-        const projects = data.filter(repo => !repo.fork);
+        projectCard.innerHTML = `
+          <h3>${repo.name}</h3>
+          <p>${repo.description || "No description available."}</p>
+          <a href="${repo.html_url}" target="_blank">View on GitHub</a>
+        `;
 
-        projectList.innerHTML = projects
-            .map(project => `
-                <div class="col-md-4">
-                    <div class="project-card">
-                        <h3>${project.name}</h3>
-                        <p>${project.description || "No description available."}</p>
-                        <a href="${project.html_url}" target="_blank">View Project</a>
-                    </div>
-                </div>
-            `)
-            .join("");
-    } catch (error) {
-        console.error("Error fetching projects:", error);
-    }
-};
+        projectList.appendChild(projectCard);
+      });
+    })
+    .catch((error) => console.error("Error fetching project data:", error));
+});
 
-fetchProjects();
 
 
 
