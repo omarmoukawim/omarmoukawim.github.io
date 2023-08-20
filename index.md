@@ -29,7 +29,38 @@
             </div>
         </div>
     </section>
-    <!-- More sections (Skills, About, Contact) can be added here -->
+    <section id="skills" class="py-5">
+        <div class="container">
+            <h2 class="display-4 text-center mb-5">Skills</h2>
+            <ul class="list-group">
+                <li class="list-group-item">Control Systems Design</li>
+                <li class="list-group-item">Programming (Python, MATLAB)</li>
+                <li class="list-group-item">Modeling and Simulation</li>
+                <li class="list-group-item">Data Analysis</li>
+                <!-- Add more skills here -->
+            </ul>
+        </div>
+    </section>
+    <section id="about" class="py-5">
+        <div class="container">
+            <h2 class="display-4 text-center mb-5">About Me</h2>
+            <p>
+                I am a passionate control system engineer with a strong background in designing and implementing control algorithms for various applications. I have experience in both academic research and industry projects.
+            </p>
+            <!-- Add more about me content here -->
+        </div>
+    </section>
+    <section id="contact" class="bg-light py-5">
+        <div class="container">
+            <h2 class="display-4 text-center mb-5">Contact</h2>
+            <p>If you'd like to get in touch, feel free to reach out to me:</p>
+            <ul class="list-unstyled">
+                <li>Email: your.email@example.com</li>
+                <li>LinkedIn: <a href="https://www.linkedin.com/in/your-username/" target="_blank">your-username</a></li>
+                <!-- Add more contact information here -->
+            </ul>
+        </div>
+    </section>
     <footer class="bg-dark text-white py-3">
         <div class="container text-center">
             <p>&copy; 2023 Your Name. All rights reserved.</p>
