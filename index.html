@@ -4,27 +4,156 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Omar Moukawim's Portfolio 👋</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Custom styles */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f8f9fa;
+            color: #333;
+        }
+        .navbar {
+            background-color: #343a40;
+            border-bottom: 3px solid #d9534f;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+        .navbar-brand {
+            color: #fff;
+            font-size: 24px;
+            font-weight: bold;
+        }
+        .navbar-nav .nav-link {
+            color: #fff;
+            font-size: 16px;
+        }
+        .navbar-nav .nav-link:hover {
+            color: #d9534f;
+        }
+        .header {
+            background-color: #343a40;
+            color: #fff;
+            padding: 50px 0;
+            text-align: center;
+        }
+        .header h1 {
+            margin-bottom: 10px;
+        }
+        .header p {
+            font-size: 18px;
+            margin-bottom: 20px;
+        }
+        .section-header {
+            background-color: #d9534f;
+            color: #fff;
+            padding: 40px 0;
+            text-align: center;
+        }
+        .section-header h2 {
+            margin-bottom: 10px;
+        }
+        .profile-picture {
+            border: 5px solid white;
+            margin-bottom: 20px;
+            width: 150px;
+            height: 150px;
+            object-fit: cover;
+            border-radius: 50%;
+        }
+        .social-icons {
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
+        }
+        .social-icon {
+            font-size: 24px;
+            color: #d9534f;
+            margin: 0 10px;
+            transition: color 0.3s;
+        }
+        .social-icon:hover {
+            color: #c9302c;
+        }
+        .project-card {
+            background-color: #fff;
+            border: 1px solid #ccc;
+            padding: 20px;
+            margin-bottom: 20px;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        .project-card h5 {
+            margin-bottom: 10px;
+            font-size: 20px;
+        }
+        .project-card p {
+            font-size: 16px;
+            margin-bottom: 15px;
+        }
+        .project-card a {
+            display: inline-block;
+            padding: 8px 12px;
+            background-color: #d9534f;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 4px;
+            transition: background-color 0.3s;
+        }
+        .project-card a:hover {
+            background-color: #c9302c;
+        }
+    </style>
 </head>
 <body>
-    <header class="bg-primary text-white py-4">
-        <div class="container text-center">
-            <img src="https://imgur.com/70uFGJr" alt="Your Name" class="rounded-circle mb-3 profile-picture">
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <div class="container">
+            <a class="navbar-brand" href="#">Your Portfolio</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#projects">Projects</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#skills">Skills</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <section class="header">
+        <div class="container">
+            <img src="your-profile-picture.jpg" alt="Your Name" class="rounded-circle profile-picture">
             <h1 class="display-4">Your Name</h1>
             <p class="lead">Advanced Programmer & Control System Engineer</p>
+            <div class="social-icons">
+                <a href="https://github.com/your-username" target="_blank" class="social-icon"><i class="fab fa-github"></i></a>
+                <a href="https://www.linkedin.com/in/your-username" target="_blank" class="social-icon"><i class="fab fa-linkedin"></i></a>
+            </div>
         </div>
-    </header>
-    <section id="projects" class="py-5">
+    </section>
+
+    <section id="projects">
         <div class="container">
-            <h2 class="display-4 text-center mb-5">Projects</h2>
+            <h2 class="section-header text-center mb-5">Projects</h2>
             <div class="row" id="project-list">
                 <!-- Dynamic project cards will be added here -->
             </div>
         </div>
     </section>
+
     <section id="skills" class="bg-light py-5">
         <div class="container">
-            <h2 class="display-4 text-center mb-5">Skills</h2>
+            <h2 class="section-header text-center mb-5">Skills</h2>
             <div class="row">
                 <div class="col-md-6">
                     <h4>Languages</h4>
@@ -47,23 +176,60 @@
             </div>
         </div>
     </section>
-    <section id="contact" class="py-5">
+
+        <section id="about" class="py-5">
         <div class="container">
-            <h2 class="display-4 text-center mb-5">Contact</h2>
-            <p>If you'd like to get in touch, feel free to reach out to me:</p>
-            <ul class="list-unstyled">
-                <li>Email: your.email@example.com</li>
-                <li>LinkedIn: <a href="https://www.linkedin.com/in/your-username/" target="_blank">your-username</a></li>
-                <!-- Add more contact information -->
-            </ul>
+            <h2 class="section-header text-center mb-5">About Me</h2>
+            <div class="row">
+                <div class="col-md-6">
+                    <h4>Who am I?</h4>
+                    <p>
+                        Write a brief introduction about yourself, your background, and your passion for control system engineering and programming.
+                    </p>
+                </div>
+                <div class="col-md-6">
+                    <h4>My Interests</h4>
+                    <p>
+                        Share your interests, hobbies, and activities that inspire you both in and outside of your work.
+                    </p>
+                </div>
+            </div>
         </div>
     </section>
+
+    <section id="contact" class="bg-light py-5">
+        <div class="container">
+            <h2 class="section-header text-center mb-5">Contact Me</h2>
+            <div class="row">
+                <div class="col-md-6">
+                    <h4>Let's Get in Touch</h4>
+                    <p>
+                        If you'd like to collaborate on a project or just say hello, feel free to reach out to me.
+                    </p>
+                </div>
+                <div class="col-md-6">
+                    <h4>Contact Information</h4>
+                    <ul class="list-unstyled">
+                        <li><i class="fas fa-envelope"></i> Email: your.email@example.com</li>
+                        <li><i class="fas fa-phone"></i> Phone: +123 456 7890</li>
+                        <li><i class="fas fa-map-marker-alt"></i> Location: Your City, Country</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
     <footer class="bg-dark text-white py-3">
         <div class="container text-center">
             <p>&copy; 2023 Your Name. All rights reserved.</p>
         </div>
     </footer>
-    <script src="scripts.js"></script>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </body>
 </html>
+
 
