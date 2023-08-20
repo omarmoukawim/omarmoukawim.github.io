@@ -1,32 +1,81 @@
-// Function to fetch data from GitHub API and generate project cards
-async function generateProjectCards() {
+document.addEventListener("DOMContentLoaded", function() {
     const projectList = document.getElementById("project-list");
+    const prevBtn = document.getElementById("prev-btn");
+    const nextBtn = document.getElementById("next-btn");
+    const projectsPerPage = 3; // Number of projects per page
+    let currentPage = 0; // Current page index
 
-    try {
-        const response = await fetch("https://api.github.com/users/your-username/repos");
-        const repos = await response.json();
-
-        repos.forEach(repo => {
-            if (!repo.fork) { // Exclude forked repositories
-                const projectCard = document.createElement("div");
-                projectCard.className = "col-md-6";
-
-                const cardContent = `
-                    <div class="project-card">
-                        <h5>${repo.name}</h5>
-                        <p>${repo.description || "No description available."}</p>
-                        <a href="${repo.html_url}" target="_blank">View Project</a>
-                    </div>
-                `;
-
-                projectCard.innerHTML = cardContent;
-                projectList.appendChild(projectCard);
-            }
-        });
-    } catch (error) {
-        console.error("Error fetching GitHub data:", error);
+    // Fetch project data from GitHub (Replace with your own API endpoint)
+    async function fetchProjects() {
+        try {
+            const response = await fetch("https://api.github.com/users/your-username/repos");
+            const projects = await response.json();
+            return projects;
+        } catch (error) {
+            console.error("Error fetching projects:", error);
+            return [];
+        }
     }
-}
+
+    // Display projects on the page
+    async function displayProjects() {
+        const projects = await fetchProjects();
+
+        // Clear existing projects
+        projectList.innerHTML = "";
+
+        // Calculate start and end index of current page
+        const startIndex = currentPage * projectsPerPage;
+        const endIndex = startIndex + projectsPerPage;
+
+        // Loop through projects for the current page
+        for (let i = startIndex; i < endIndex && i < projects.length; i++) {
+            const project = projects[i];
+
+            const projectCard = document.createElement("div");
+            projectCard.classList.add("project-card");
+
+            const projectName = document.createElement("h5");
+            projectName.textContent = project.name;
+
+            const projectDescription = document.createElement("p");
+            projectDescription.textContent = project.description || "No description available.";
+
+            const projectLink = document.createElement("a");
+            projectLink.href = project.html_url;
+            projectLink.target = "_blank";
+            projectLink.textContent = "View Project";
+
+            projectCard.appendChild(projectName);
+            projectCard.appendChild(projectDescription);
+            projectCard.appendChild(projectLink);
+
+            projectList.appendChild(projectCard);
+        }
+
+        // Update slider buttons visibility
+        prevBtn.style.display = currentPage === 0 ? "none" : "block";
+        nextBtn.style.display = endIndex >= projects.length ? "none" : "block";
+    }
+
+    // Handle previous button click
+    prevBtn.addEventListener("click", function() {
+        if (currentPage > 0) {
+            currentPage--;
+            displayProjects();
+        }
+    });
+
+    // Handle next button click
+    nextBtn.addEventListener("click", function() {
+        currentPage++;
+        displayProjects();
+    });
+
+    // Initial display
+    displayProjects();
+});
+
 
 // Smooth scrolling for navigation links
 document.addEventListener("DOMContentLoaded", () => {
