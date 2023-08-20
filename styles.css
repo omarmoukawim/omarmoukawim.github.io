@@ -192,6 +192,8 @@ p {
 
 .contact-info li {
     margin-bottom: 10px;
+    display: flex; /* Align items in a row */
+    align-items: center; /* Vertically center items */
 }
 
 .contact-info i {
