@@ -289,6 +289,16 @@ footer {
     z-index: 1;
 }
 
+.timeline-item-description {
+    display: none;
+    margin-top: 10px;
+    font-size: 16px;
+}
+
+.toggle-description {
+    margin-top: 10px;
+}
+
 /* Adjust placement of the timeline items */
 @media (min-width: 768px) {
     .timeline-item {
