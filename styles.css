@@ -206,7 +206,7 @@ p {
     margin-right: 10px;
 }
 
-#contact ul.list-unstyled {
+#contact .list-unstyled {
     list-style: none;
     padding-left: 0;
 }
