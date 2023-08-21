@@ -55,20 +55,35 @@ const workExperiences = [
         const timelineItem = document.createElement("div");
         timelineItem.classList.add("timeline-item");
 
-        timelineItem.innerHTML = `
-            <div class="timeline-item-content">
-                <h4>${experience.position}</h4>
-                <p class="timeline-item-subtitle">${experience.company} | ${experience.location}</p>
-                <p class="timeline-item-date">${experience.date}</p>
-                <p>${experience.description}</p>
-            </div>
+        const timelineItemContent = document.createElement("div");
+        timelineItemContent.classList.add("timeline-item-content");
+
+        timelineItemContent.innerHTML = `
+            <h4>${experience.position}</h4>
+            <p class="timeline-item-subtitle">${experience.company} | ${experience.location}</p>
+            <p class="timeline-item-date">${experience.date}</p>
+            <button class="btn btn-primary toggle-description">Toggle Description</button>
+            <p class="timeline-item-description">${experience.description}</p>
         `;
 
+        timelineItem.appendChild(timelineItemContent);
         workExperienceTimeline.appendChild(timelineItem);
+
+        const toggleButton = timelineItemContent.querySelector(".toggle-description");
+        const description = timelineItemContent.querySelector(".timeline-item-description");
+        
+        // Hide the description by default
+        description.style.display = "none";
+
+        // Toggle the description visibility on button click
+        toggleButton.addEventListener("click", function () {
+            if (description.style.display === "none") {
+                description.style.display = "block";
+            } else {
+                description.style.display = "none";
+            }
+        });
     });
-    
-    // Rest of your code (smooth scrolling, etc.)
-});
 
 
 
