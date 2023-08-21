@@ -221,3 +221,44 @@ footer {
 @media (max-width: 768px) {
     /* Add your media query styles here */
 }
+/* Timeline section styles */
+.timeline-section {
+    background-color: #f8f8f8;
+    padding: 50px 0;
+}
+
+.timeline {
+    position: relative;
+    margin: 0 auto;
+    padding: 20px;
+    max-width: 1200px;
+}
+
+.timeline-item {
+    position: relative;
+    margin-bottom: 50px;
+}
+
+.timeline-content {
+    background-color: #fff;
+    padding: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    position: relative;
+}
+
+.timeline-item::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 2px;
+    height: 100%;
+    background-color: #ccc;
+    transform: translateX(-50%);
+}
+
+.timeline-item:last-child::before {
+    display: none;
+}
+
