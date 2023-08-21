@@ -225,33 +225,43 @@ footer {
 /* Timeline styles */
 .timeline {
     position: relative;
-    background-color: #f8f8f8;
 }
 
+.timeline:before {
+    content: "";
+    position: absolute;
+    left: 50%;
+    top: 0;
+    transform: translateX(-50%);
+    width: 4px;
+    height: 100%;
+    background-color: #ff8000;
+}
 
 .timeline-section {
     background-color: #f8f8f8;
+    padding: 50px 0;
 }
+
 .timeline-item {
     position: relative;
-    padding-left: 40px;
+    padding-left: 20px;
     margin-bottom: 40px;
 }
 
 .timeline-item-content {
     padding: 20px;
-    background: #fff;
+    background: #f4f4f4;
     border-radius: 5px;
     position: relative;
     max-width: 600px;
     width: 100%;
     box-sizing: border-box;
     margin-bottom: 20px;
-    display: flex; /* Use Flexbox */
-    flex-direction: column; /* Stack content vertically */
+    display: flex;
+    flex-direction: column;
 }
 
-/* Remove min-height to let content determine height */
 .timeline-item-content h4 {
     margin-top: 0;
 }
@@ -266,14 +276,28 @@ footer {
     color: #666;
     margin-top: 5px;
 }
+
 .timeline-item::before {
     content: "";
     position: absolute;
-    left: 0;
-    top: 10px;
+    left: -7px;
+    top: 5px;
     width: 20px;
     height: 20px;
     background: #ff8000;
     border-radius: 50%;
+    z-index: 1;
 }
+
+/* Adjust placement of the timeline items */
+@media (min-width: 768px) {
+    .timeline-item {
+        padding-left: 40px;
+    }
+
+    .timeline-item::before {
+        left: -7px;
+    }
+}
+
 
