@@ -94,7 +94,7 @@ p {
 }
 
 /* Projects section styles */
-#projects {
+.projects {
     background-color: #fff;
     padding: 50px 0;
     text-align: center;
