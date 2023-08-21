@@ -1,27 +1,45 @@
 document.addEventListener("DOMContentLoaded", async function () {
     // Fetch project data from your GitHub repository
     fetch("https://api.github.com/users/omarmoukawim/repos")
-        .then((response) => response.json())
-        .then((data) => {
-            const projectList = document.getElementById("project-list");
+    .then((response) => response.json())
+    .then((data) => {
+        const projectList = document.getElementById("project-list");
 
-            data.forEach(async (repo) => {
-                const repoResponse = await fetch(repo.url); // Fetch individual repo details
-                const repoData = await repoResponse.json();
+        data.forEach(async (repo) => {
+            const repoResponse = await fetch(repo.url); // Fetch individual repo details
+            const repoData = await repoResponse.json();
 
-                const projectCard = document.createElement("div");
-                projectCard.classList.add("col-md-4", "project-card");
+            const projectCard = document.createElement("div");
+            projectCard.classList.add("col-md-4", "project-card");
 
-                projectCard.innerHTML = `
-                  <h3>${repo.name}</h3>
-                  <p>${repoData.description || "No description available."}</p>
-                  <a href="${repo.html_url}" target="_blank">View on GitHub</a>
-                `;
+            projectCard.innerHTML = `
+              <h3>${repo.name}</h3>
+              <button class="btn btn-primary toggle-description">Description</button>
+              <p class="timeline-item-description">${repoData.description || "No description available."}</p>
+              <a href="${repo.html_url}" target="_blank">View on GitHub</a>
+            `;
 
-                projectList.appendChild(projectCard);
+            projectList.appendChild(projectCard);
+
+            const toggleButton = projectCard.querySelector(".toggle-description");
+            const description = projectCard.querySelector(".timeline-item-description");
+
+            // Hide the description by default
+            description.style.display = "none";
+
+            // Toggle the description visibility on button click
+            toggleButton.addEventListener("click", function () {
+                if (description.style.display === "none") {
+                    description.style.display = "block";
+                    toggleButton.style.backgroundColor = "grey";
+                } else {
+                    description.style.display = "none";
+                    toggleButton.style.backgroundColor = "#007BFE";
+                }
             });
-        })
-        .catch((error) => console.error("Error fetching project data:", error));
+        });
+    })
+    .catch((error) => console.error("Error fetching project data:", error));
     });
 
 
