@@ -225,7 +225,7 @@ footer {
 /* Timeline styles */
 .timeline {
     position: relative;
-    background-color: #fff;
+    background-color: #f8f8f8;
 }
 
 
@@ -240,7 +240,7 @@ footer {
 
 .timeline-item-content {
     padding: 20px;
-    background: #f4f4f4;
+    background: #fff;
     border-radius: 5px;
     position: relative;
     max-width: 600px;
