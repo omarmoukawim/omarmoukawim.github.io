@@ -74,22 +74,22 @@ const workExperiences = [
 ];
 
 
+// Populate work experiences in the timeline section
+const workExperienceTimeline = document.querySelector("#work-experience .timeline");
 
+workExperiences.forEach(experience => {
+    const timelineItem = document.createElement("div");
+    timelineItem.classList.add("timeline-item");
 
-const timeline = document.querySelector(".timeline");
+    timelineItem.innerHTML = `
+        <div class="timeline-item-content">
+            <h4>${experience.position}</h4>
+            <p class="timeline-item-subtitle">${experience.company} | ${experience.location}</p>
+            <p class="timeline-item-date">${experience.date}</p>
+            <p>${experience.description}</p>
+        </div>
+    `;
 
-workExperiences.forEach((experience) => {
-  const timelineItem = document.createElement("div");
-  timelineItem.classList.add("timeline-item");
-
-  timelineItem.innerHTML = `
-    <div class="timeline-item-content">
-        <h4>${experience.position}</h4>
-        <p class="timeline-item-subtitle">${experience.company} | ${experience.location}</p>
-        <p class="timeline-item-date">${experience.date}</p>
-        <p>${experience.description}</p>
-    </div>
-  `;
-
-  timeline.appendChild(timelineItem);
+    workExperienceTimeline.appendChild(timelineItem);
 });
+
