@@ -1,6 +1,6 @@
 document.addEventListener("DOMContentLoaded", function () {
   // Fetch project data from your GitHub repository
-  fetch("https://api.github.com/users/your-username/repos")
+  fetch("https://api.github.com/users/omarmoukawim/repos")
     .then((response) => response.json())
     .then((data) => {
       const projectList = document.getElementById("project-list");
