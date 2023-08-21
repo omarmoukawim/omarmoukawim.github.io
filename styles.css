@@ -221,6 +221,7 @@ footer {
 @media (max-width: 768px) {
     /* Add your media query styles here */
 }
+
 /* Timeline section styles */
 .timeline-section {
     background-color: #f8f8f8;
@@ -228,15 +229,14 @@ footer {
 }
 
 .timeline {
-    position: relative;
+    max-width: 800px;
     margin: 0 auto;
-    padding: 20px;
-    max-width: 1200px;
 }
 
 .timeline-item {
     position: relative;
-    margin-bottom: 50px;
+    padding-left: 40px;
+    margin-bottom: 40px;
 }
 
 .timeline-content {
@@ -244,21 +244,15 @@ footer {
     padding: 20px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     border-radius: 5px;
-    position: relative;
 }
 
 .timeline-item::before {
     content: "";
     position: absolute;
     top: 0;
-    left: 50%;
-    width: 2px;
-    height: 100%;
-    background-color: #ccc;
-    transform: translateX(-50%);
+    left: 20px;
+    width: 20px;
+    height: 20px;
+    background-color: #ff8000;
+    border-radius: 50%;
 }
-
-.timeline-item:last-child::before {
-    display: none;
-}
-
