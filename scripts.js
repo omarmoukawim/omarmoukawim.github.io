@@ -21,16 +21,13 @@ document.addEventListener("DOMContentLoaded", function () {
     .catch((error) => console.error("Error fetching project data:", error));
 });
 
-
-
-
 // Smooth scrolling for navigation links
-document.addEventListener("DOMContentLoaded", () => {
-    const navLinks = document.querySelectorAll(".navbar-nav .nav-link");
-    navLinks.forEach(link => {
-        link.addEventListener("click", (e) => {
-            e.preventDefault();
-            const targetId = link.getAttribute("href");
-            document.querySelector(targetId).scrollIntoView({ behavior: "smooth" });
+document.querySelectorAll('a.nav-link').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+
+        document.querySelector(this.getAttribute('href')).scrollIntoView({
+            behavior: 'smooth'
         });
     });
+});
