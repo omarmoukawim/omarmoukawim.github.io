@@ -135,14 +135,14 @@ const workExperiences = [
             description: "The preparation allows you to understand the operating principles of modern electronic (both analog and digital), robotics, control, information processing and telecommunication systems. Following the automation branch gave me the opportunity to learn particularly about Industrial Robotics, Electric Machines, Control Systems and Power Electronics"
         },
         {
-            date: "10/2022-11/2022",
+            date: "09/2013-07/2018",
             location: "L'Aquila, Italy",
             position: "HIGH SCHOOL SCIENTIFIC DIPLOMA",
             company: "Liceo Scientifico A.Bafile",
             description: "Graduated from Liceo Scientifico in Italy, gaining a strong foundation in mathematics and the natural sciences. Developed critical thinking and analytical skills through a rigorous curriculum, preparing for future academic and professional challenges."
         },
         {
-            date: "09/2013-07/2018",
+            date: "10/2022-11/2022",
             location: "L'Aquila, Italy",
             position: "HUAWEI SEEDS FOR THE FUTURE",
             company: "Huawei",
