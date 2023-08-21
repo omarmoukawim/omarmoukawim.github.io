@@ -70,7 +70,7 @@ const workExperiences = [
         position: "ICT INTERNSHIP",
         company: "VANTEA SPA",
         description: "Main goals:\nProject and realization of specific Software solutions with languages of scripting related to specific applications\nAnalysis of the characteristics of the application to develop (structure, relations, processes)\nTest of the modules of the application that makes up the solution.\nDocumentation of the development phases and test results\nBusiness or Sector Information and communication"
-    }
+    },
 ];
 
 // Rest of the code remains the same
