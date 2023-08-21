@@ -50,7 +50,6 @@ document.querySelectorAll('a.nav-link, a.timeline-link').forEach(anchor => {
 
 
 const workExperiences = [
-const workExperiences = [
     {
         date: "1/07/2023 – CURRENT",
         location: "L'Aquila, Italy",
