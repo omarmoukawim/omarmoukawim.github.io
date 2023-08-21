@@ -100,20 +100,18 @@ p {
     text-align: center;
 }
 
-.project-slider {
+.project-list {
     display: flex;
-    overflow-x: scroll;
-    margin-top: 20px;
-    padding-bottom: 20px;
+    flex-wrap: wrap;
+    justify-content: space-between;
 }
 
 .project-card {
     background-color: #fff;
     border-radius: 5px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    flex: 0 0 auto;
-    width: 300px;
-    margin-right: 20px;
+    width: 100%;
+    margin-bottom: 20px;
     padding: 20px;
     text-align: left;
 }
