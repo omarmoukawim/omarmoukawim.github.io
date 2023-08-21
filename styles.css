@@ -225,6 +225,7 @@ footer {
 /* Timeline styles */
 .timeline {
     position: relative;
+    background-color: #f8f8f8;
 }
 
 .timeline-item {
@@ -234,19 +235,33 @@ footer {
 }
 
 .timeline-item-content {
-    position: relative;
-    background: #fff;
-    border-radius: 5px;
     padding: 20px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    background: #f4f4f4;
+    border-radius: 5px;
+    position: relative;
+    max-width: 600px;
+    width: 100%;
+    box-sizing: border-box;
+    margin-bottom: 20px;
+    display: flex; /* Use Flexbox */
+    flex-direction: column; /* Stack content vertically */
 }
 
-.timeline-item-subtitle,
-.timeline-item-date {
-    font-size: 14px;
+/* Remove min-height to let content determine height */
+.timeline-item-content h4 {
+    margin-top: 0;
+}
+
+.timeline-item-subtitle {
+    font-size: 16px;
     margin-top: 5px;
 }
 
+.timeline-item-date {
+    font-size: 14px;
+    color: #666;
+    margin-top: 5px;
+}
 .timeline-item::before {
     content: "";
     position: absolute;
