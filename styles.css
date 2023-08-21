@@ -49,6 +49,12 @@ body {
 .navbar-nav a:hover {
     background-color: #140800;
 }
+
+.contact-info ul {
+    list-style: none;
+    padding-left: 0;
+}
+
 /* Header section styles */
 #header {
     background-color: #fff;
