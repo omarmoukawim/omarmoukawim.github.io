@@ -22,7 +22,7 @@ document.addEventListener("DOMContentLoaded", async function () {
             });
         })
         .catch((error) => console.error("Error fetching project data:", error));
-
+    });
     // Populate work experience timeline
 const workExperiences = [
     {
