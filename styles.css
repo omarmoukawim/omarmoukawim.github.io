@@ -225,9 +225,13 @@ footer {
 /* Timeline styles */
 .timeline {
     position: relative;
-    background-color: #f8f8f8;
+    background-color: #fff;
 }
 
+
+.timeline-section {
+    background-color: #f8f8f8;
+}
 .timeline-item {
     position: relative;
     padding-left: 40px;
