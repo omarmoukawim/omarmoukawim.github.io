@@ -1,21 +1,24 @@
 document.addEventListener("DOMContentLoaded", async function () {
     // Fetch project data from your GitHub repository
-    fetch("https://api.github.com/users/omarmoukawim/repos")
+
+fetch("https://api.github.com/users/omarmoukawim/repos")
     .then((response) => response.json())
     .then((data) => {
         const projectList = document.getElementById("project-list");
 
         data.forEach(async (repo) => {
-            const repoResponse = await fetch(repo.url); // Fetch individual repo details
-            const repoData = await repoResponse.json();
+            const readmeUrl = `https://api.github.com/repos/${repo.full_name}/readme`;
+            const readmeResponse = await fetch(readmeUrl); // Fetch README content
+            const readmeData = await readmeResponse.json();
+            const readmeContent = atob(readmeData.content); // Decode base64 content
 
             const projectCard = document.createElement("div");
             projectCard.classList.add("col-md-4", "project-card");
 
             projectCard.innerHTML = `
               <h3>${repo.name}</h3>
-              <button class="btn btn-primary toggle-description">Description</button>
-              <p class="timeline-item-description">${repoData.description || "No description available."}</p>
+              <button class="btn btn-primary toggle-description">Toggle Description</button>
+              <p class="timeline-item-description">${readmeContent || "No README content available."}</p>
               <a href="${repo.html_url}" target="_blank">View on GitHub</a>
             `;
 
@@ -31,15 +34,14 @@ document.addEventListener("DOMContentLoaded", async function () {
             toggleButton.addEventListener("click", function () {
                 if (description.style.display === "none") {
                     description.style.display = "block";
-                    toggleButton.style.backgroundColor = "grey";
                 } else {
                     description.style.display = "none";
-                    toggleButton.style.backgroundColor = "#007BFE";
                 }
             });
         });
     })
     .catch((error) => console.error("Error fetching project data:", error));
+
     });
 
 
