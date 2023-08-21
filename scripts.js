@@ -1,9 +1,11 @@
+
+
 document.addEventListener("DOMContentLoaded", async function () {
     try {
       // Fetch project data from your GitHub repository
       const response = await fetch("https://api.github.com/users/omarmoukawim/repos", {
         headers: {
-          Authorization: `Bearer ${secrets.TOKEN_PORTFOLIO}`,//salvata su blocco note in cartella desktop
+          Authorization: `Bearer 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`,//salvata su blocco note in cartella desktop e anche nel file config
         },
       });
   
