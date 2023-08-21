@@ -43,3 +43,4 @@ document.querySelectorAll('a.nav-link, a.timeline-link').forEach(anchor => {
         }, 1000);
     });
 });
+
