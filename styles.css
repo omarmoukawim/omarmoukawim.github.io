@@ -206,6 +206,11 @@ p {
     margin-right: 10px;
 }
 
+#contact ul.list-unstyled {
+    list-style: none;
+    padding-left: 0;
+}
+
 /* Footer styles */
 footer {
     background-color: #333;
