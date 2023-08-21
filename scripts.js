@@ -50,45 +50,32 @@ document.querySelectorAll('a.nav-link, a.timeline-link').forEach(anchor => {
 
 
 const workExperiences = [
+const workExperiences = [
     {
-        title: "Master Thesis | Cybersecurity for Automotive",
-        company: "Leonardo",
+        date: "1/07/2023 – CURRENT",
         location: "L'Aquila, Italy",
-        date: "July 2023 - Present",
-        description: "My work revolves around ensuring the Cybersecurity of vehicles, encompassing the protection of the entire
-                      ecosystem, from onboard systems to remote infrastructures used for management and updates. I am
-                      currently collaborating with my university and Leonardo Spa to introduce intrusion analysis into vehicle
-                      fleets through the development of a novel technology.",
+        position: "MASTER THESIS | CYBERSECURITY FOR AUTOMOTIVE",
+        company: "LEONARDO",
+        description: "My work revolves around ensuring the Cybersecurity of vehicles, encompassing the protection of the entire ecosystem, from onboard systems to remote infrastructures used for management and updates. I am currently collaborating with my university and Leonardo Spa to introduce intrusion analysis into vehicle fleets through the development of a novel technology."
     },
     {
-        title: "Intern | Core System Application Integration",
-        company: "Volvo Cars Corporation",
+        date: "23/01/2023 – 26/05/2023",
         location: "Göteborg, Sweden",
-        date: "January 2023 - May 2023",
-        description: "I worked with further development of test activities to enable test automation and Continuous Integration
-                      (CI) for Volvo Cars ECUs. I was engaged with the entire process from design of test infrastructure to analyze
-                      test results when the HIL rigs are up and running in the CI environment. We developed as a team tool
-                      chains for test automation and test cases to verify the ECU SW in Python, Robot Framework or CAPL.
-                      Moreover, I got experience with SW version control (Git/Gerrit), CANoe and got the occasion to further
-                      deepen my knowledge in Simulink.
-                      As an intern in an Agile development team I not only gained a broad understanding of Volvo Cars vehicle
-                      systems and electrical functions but also about SAFe and all the Scrum cerimonies (Sprint Planning, Daily
-                      Standups, Sprint retrospectives, Sprint Demos, Story Grooming ecc..).",
+        position: "INTERN | CORE SYSTEM APPLICATION INTEGRATION",
+        company: "VOLVO CARS CORPORATION",
+        description: "I worked with further development of test activities to enable test automation and Continuous Integration (CI) for Volvo Cars ECUs. I was engaged with the entire process from design of test infrastructure to analyze test results when the HIL rigs are up and running in the CI environment. We developed as a team tool chains for test automation and test cases to verify the ECU SW in Python, Robot Framework or CAPL. Moreover, I got experience with SW version control (Git/Gerrit), CANoe and got the occasion to further deepen my knowledge in Simulink. As an intern in an Agile development team I not only gained a broad understanding of Volvo Cars vehicle systems and electrical functions but also about SAFe and all the Scrum cerimonies (Sprint Planning, Daily Standups, Sprint retrospectives, Sprint Demos, Story Grooming ecc..)."
     },
     {
-        title: "ICT Internship",
-        company: "Vantea Spa",
+        date: "09/04/2021 – 09/07/2021",
         location: "Rome, Italy",
-        date: "April 2021 - July 2021",
-        description: "My main goals were:
-                      Project and realization of specific Software solutions with languages of scripting related to specific
-                      applications;
-                      Analysis of the characteristics of the application to develop (structure, relations, processes);
-                      Test of the modules of the application that makes up the solution;
-                      Documentation of the development phases and test results.",
-    },
-    // Add more work experiences here
+        position: "ICT INTERNSHIP",
+        company: "VANTEA SPA",
+        description: "Main goals:\nProject and realization of specific Software solutions with languages of scripting related to specific applications\nAnalysis of the characteristics of the application to develop (structure, relations, processes)\nTest of the modules of the application that makes up the solution.\nDocumentation of the development phases and test results\nBusiness or Sector Information and communication"
+    }
 ];
+
+// Rest of the code remains the same
+
 
 const timeline = document.querySelector(".timeline");
 
