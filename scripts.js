@@ -49,6 +49,8 @@ document.querySelectorAll('a.nav-link, a.timeline-link').forEach(anchor => {
 });
 
 
+// Populate work experience and education timeline sections
+const timeline = document.querySelector(".timeline");
 const workExperiences = [
     {
         date: "1/07/2023 – CURRENT",
@@ -74,22 +76,33 @@ const workExperiences = [
 ];
 
 
-// Populate work experiences in the timeline section
-const workExperienceTimeline = document.querySelector("#work-experience .timeline");
+    const educationItems = [
+        // Your education items data here
+    ];
 
-workExperiences.forEach(experience => {
-    const timelineItem = document.createElement("div");
-    timelineItem.classList.add("timeline-item");
+    function populateTimeline(timeline, items) {
+        items.forEach((item) => {
+            const timelineItem = document.createElement("div");
+            timelineItem.classList.add("timeline-item");
 
-    timelineItem.innerHTML = `
-        <div class="timeline-item-content">
-            <h4>${experience.position}</h4>
-            <p class="timeline-item-subtitle">${experience.company} | ${experience.location}</p>
-            <p class="timeline-item-date">${experience.date}</p>
-            <p>${experience.description}</p>
-        </div>
-    `;
+            timelineItem.innerHTML = `
+                <div class="timeline-item-content">
+                    <h4>${item.position}</h4>
+                    <p class="timeline-item-subtitle">${item.company} | ${item.location}</p>
+                    <p class="timeline-item-date">${item.date}</p>
+                    <p>${item.description}</p>
+                </div>
+            `;
 
-    workExperienceTimeline.appendChild(timelineItem);
+            timeline.appendChild(timelineItem);
+        });
+    }
+
+    populateTimeline(timeline, workExperiences);
+
+    const educationTimeline = document.querySelector("#education .timeline");
+    populateTimeline(educationTimeline, educationItems);
 });
+
+
 
