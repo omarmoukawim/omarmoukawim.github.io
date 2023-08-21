@@ -23,7 +23,9 @@ document.addEventListener("DOMContentLoaded", async function () {
         })
         .catch((error) => console.error("Error fetching project data:", error));
     });
-    // Populate work experience timeline
+
+
+// Populate work experience timeline
 const workExperiences = [
     {
         date: "1/07/2023 – CURRENT",
@@ -62,13 +64,14 @@ const workExperiences = [
             <h4>${experience.position}</h4>
             <p class="timeline-item-subtitle">${experience.company} | ${experience.location}</p>
             <p class="timeline-item-date">${experience.date}</p>
-            <button class="btn btn-primary toggle-description">Toggle Description</button>
+            <button class="btn btn-primary toggle-description" style="background-color: #ff8000;">Toggle Description</button>
             <p class="timeline-item-description">${experience.description}</p>
         `;
 
         timelineItem.appendChild(timelineItemContent);
         workExperienceTimeline.appendChild(timelineItem);
-
+        
+        
         const toggleButton = timelineItemContent.querySelector(".toggle-description");
         const description = timelineItemContent.querySelector(".timeline-item-description");
         
@@ -76,16 +79,94 @@ const workExperiences = [
         description.style.display = "none";
 
         // Toggle the description visibility on button click
-        toggleButton.addEventListener("click", function () {
+        toggleButton.addEventListener("click", function () { 
+            
             if (description.style.display === "none") {
                 description.style.display = "block";
+                toggleButton.style.backgroundColor = "grey";
             } else {
                 description.style.display = "none";
+                toggleButton.style.backgroundColor = "#ff8000";
             }
         });
     });
 
 
+// Populate education timeline
+    const educationItems = [
+        {
+            date: "09/2021-12/2023",
+            location: "L'Aquila, Italy",
+            position: "MASTER’S DEGREE IN INFORMATION AND AUTOMATION ENGINEERING - 'CONTROL SYSTEM ENGINEERING'  CURRICULUM",
+            company: "University of L'Aquila",
+            description: "The 'Control System Engineering 'curriculum is aimed at developing skills for modeling, identification, analysis, control and optimization of systems, in complex contexts, such as that of robotics or dedicated electronic devices (or 'embedded'), in order to design, manage and supervise automated control systems."
+        },
+        {
+            date: "09/2018-07/2021",
+            location: "L'Aquila, Italy",
+            position: "BACHELOR’S DEGREE IN INFORMATION ENGINEERING - AUTOMATION CURRICULUM",
+            company: "University of L'Aquila",
+            description: "The preparation allows you to understand the operating principles of modern electronic (both analog and digital), robotics, control, information processing and telecommunication systems. Following the automation branch gave me the opportunity to learn particularly about Industrial Robotics, Electric Machines, Control Systems and Power Electronics"
+        },
+        {
+            date: "10/2022-11/2022",
+            location: "L'Aquila, Italy",
+            position: "HIGH SCHOOL SCIENTIFIC DIPLOMA",
+            company: "Liceo Scientifico A.Bafile",
+            description: "Graduated from Liceo Scientifico in Italy, gaining a strong foundation in mathematics and the natural sciences. Developed critical thinking and analytical skills through a rigorous curriculum, preparing for future academic and professional challenges."
+        },
+        {
+            date: "09/2013-07/2018",
+            location: "L'Aquila, Italy",
+            position: "HUAWEI SEEDS FOR THE FUTURE",
+            company: "Huawei",
+            description: "Seeds for the Future is Huawei's flagship global CSR program.\n It aims to develop the best 50 skilled Italian ICT talents and bridge communications between countries and cultures. The program covers exclusive courses in AI, 5G, Cloud Computing and Leadership as well as insights of China's culture."
+        },
+
+
+
+
+        // Add more education items here
+    ];
+    
+    const educationSection = document.getElementById("education");
+    const educationTimeline = educationSection.querySelector(".timeline");
+    
+    educationItems.forEach((item) => {
+        const timelineItem = document.createElement("div");
+        timelineItem.classList.add("timeline-item");
+    
+        const timelineItemContent = document.createElement("div");
+        timelineItemContent.classList.add("timeline-item-content");
+    
+        timelineItemContent.innerHTML = `
+            <h4>${item.position}</h4>
+            <p class="timeline-item-subtitle">${item.company} | ${item.location}</p>
+            <p class="timeline-item-date">${item.date}</p>
+            <button class="btn btn-primary toggle-description" style="background-color: #ff8000;">Toggle Description</button>
+            <p class="timeline-item-description">${item.description}</p>
+        `;
+    
+        timelineItem.appendChild(timelineItemContent);
+        educationTimeline.appendChild(timelineItem);
+    
+        const toggleButton = timelineItemContent.querySelector(".toggle-description");
+        const description = timelineItemContent.querySelector(".timeline-item-description");
+    
+        // Hide the description by default
+        description.style.display = "none";
+    
+        // Toggle the description visibility on button click
+        toggleButton.addEventListener("click", function () {
+            if (description.style.display === "none") {
+                description.style.display = "block";
+                toggleButton.style.backgroundColor = "grey";
+            } else {
+                description.style.display = "none";
+                toggleButton.style.backgroundColor = "#ff8000";
+            }
+        });
+    });
 
 // Smooth scrolling for navigation links
 document.querySelectorAll('a.nav-link').forEach(anchor => {
