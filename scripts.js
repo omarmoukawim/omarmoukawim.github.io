@@ -31,3 +31,15 @@ document.querySelectorAll('a.nav-link').forEach(anchor => {
         });
     });
 });
+// Smooth scrolling for navigation links and timeline anchors
+document.querySelectorAll('a.nav-link, a.timeline-link').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        
+        const target = document.querySelector(this.getAttribute('href'));
+        
+        document.querySelector('html, body').animate({
+            scrollTop: target.offsetTop - 100 // Adjust as needed for header height
+        }, 1000);
+    });
+});
