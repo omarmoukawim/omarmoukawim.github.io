@@ -84,7 +84,7 @@ workExperiences.forEach((experience) => {
 
   timelineItem.innerHTML = `
     <div class="timeline-item-content">
-        <h4>${experience.title}</h4>
+        <h4>${experience.position}</h4>
         <p class="timeline-item-subtitle">${experience.company} | ${experience.location}</p>
         <p class="timeline-item-date">${experience.date}</p>
         <p>${experience.description}</p>
