@@ -1,25 +1,29 @@
 document.addEventListener("DOMContentLoaded", function () {
-    // Fetch project data from your GitHub repository
-    fetch("https://api.github.com/users/omarmoukawim/repos")
-        .then((response) => response.json())
-        .then((data) => {
-            const projectList = document.getElementById("project-list");
+  // Fetch project data from your GitHub repository
+  fetch("https://api.github.com/users/omarmoukawim/repos")
+    .then((response) => response.json())
+    .then((data) => {
+      const projectList = document.getElementById("project-list");
 
-            data.forEach((repo) => {
-                const projectCard = document.createElement("div");
-                projectCard.classList.add("col-md-4", "project-card");
+      data.forEach(async (repo) => {
+        const repoResponse = await fetch(repo.url); // Fetch individual repo details
+        const repoData = await repoResponse.json();
 
-                projectCard.innerHTML = `
-                    <h3>${repo.name}</h3>
-                    <p>${repo.description || "No description available."}</p>
-                    <a href="${repo.html_url}" target="_blank">View on GitHub</a>
-                `;
+        const projectCard = document.createElement("div");
+        projectCard.classList.add("col-md-4", "project-card");
 
-                projectList.appendChild(projectCard);
-            });
-        })
-        .catch((error) => console.error("Error fetching project data:", error));
+        projectCard.innerHTML = `
+          <h3>${repo.name}</h3>
+          <p>${repoData.description || "No description available."}</p>
+          <a href="${repo.html_url}" target="_blank">View on GitHub</a>
+        `;
+
+        projectList.appendChild(projectCard);
+      });
+    })
+    .catch((error) => console.error("Error fetching project data:", error));
 });
+
 
 // Smooth scrolling for navigation links
 document.querySelectorAll('a.nav-link').forEach(anchor => {
