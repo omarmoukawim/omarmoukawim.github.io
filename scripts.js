@@ -55,21 +55,37 @@ const workExperiences = [
         company: "Leonardo",
         location: "L'Aquila, Italy",
         date: "July 2023 - Present",
-        description: "My work revolves around ensuring the Cybersecurity of vehicles, encompassing the protection...",
+        description: "My work revolves around ensuring the Cybersecurity of vehicles, encompassing the protection of the entire
+                      ecosystem, from onboard systems to remote infrastructures used for management and updates. I am
+                      currently collaborating with my university and Leonardo Spa to introduce intrusion analysis into vehicle
+                      fleets through the development of a novel technology.",
     },
     {
         title: "Intern | Core System Application Integration",
         company: "Volvo Cars Corporation",
         location: "Göteborg, Sweden",
         date: "January 2023 - May 2023",
-        description: "I worked with further development of test activities to enable test automation...",
+        description: "I worked with further development of test activities to enable test automation and Continuous Integration
+                      (CI) for Volvo Cars ECUs. I was engaged with the entire process from design of test infrastructure to analyze
+                      test results when the HIL rigs are up and running in the CI environment. We developed as a team tool
+                      chains for test automation and test cases to verify the ECU SW in Python, Robot Framework or CAPL.
+                      Moreover, I got experience with SW version control (Git/Gerrit), CANoe and got the occasion to further
+                      deepen my knowledge in Simulink.
+                      As an intern in an Agile development team I not only gained a broad understanding of Volvo Cars vehicle
+                      systems and electrical functions but also about SAFe and all the Scrum cerimonies (Sprint Planning, Daily
+                      Standups, Sprint retrospectives, Sprint Demos, Story Grooming ecc..).",
     },
     {
         title: "ICT Internship",
         company: "Vantea Spa",
         location: "Rome, Italy",
         date: "April 2021 - July 2021",
-        description: "Main goals:\n- Project and realization of specific Software solutions with languages of scripting...",
+        description: "My main goals were:
+                      Project and realization of specific Software solutions with languages of scripting related to specific
+                      applications;
+                      Analysis of the characteristics of the application to develop (structure, relations, processes);
+                      Test of the modules of the application that makes up the solution;
+                      Documentation of the development phases and test results.",
     },
     // Add more work experiences here
 ];
