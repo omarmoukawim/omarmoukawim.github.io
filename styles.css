@@ -346,7 +346,7 @@ footer {
 }
 .picture {
     max-width: 100%;
-    height: 500px;
+    height: 450px;
     width: 800px; /* Adjust the width of the picture */
     display: block;
     margin: 0 auto;
