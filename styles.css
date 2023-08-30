@@ -341,3 +341,6 @@ footer {
     max-width: 500px; /* Make sure the GIF scales properly */
     height: 300px; /* Allow the height to adjust accordingly */
 }
+.control-passion{
+    background-color: #ff8000;
+}
