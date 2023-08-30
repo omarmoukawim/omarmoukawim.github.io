@@ -344,3 +344,9 @@ footer {
 .control-passion{
     background-color: #ff8000;
 }
+.picture {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto; /* Center the picture horizontally */
+}
