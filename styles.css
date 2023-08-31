@@ -231,6 +231,7 @@ footer {
     position: relative;
 }
 
+/* Timeline vertical line */
 .timeline:before {
     content: "";
     position: absolute;
@@ -239,20 +240,23 @@ footer {
     transform: translateX(-50%);
     width: 4px;
     height: 100%;
-    background-color: #ff8000;
+    background-color: #ff8000; /* Line color */
 }
 
+/* Timeline section container */
 .timeline-section {
-    background-color: #f8f8f8;
+    background-color: #f8f8f8; /* Background color of each timeline section */
     padding: 50px 0;
 }
 
+/* Each timeline item */
 .timeline-item {
     position: relative;
     padding-left: 20px;
     margin-bottom: 40px;
 }
 
+/* Content within each timeline item */
 .timeline-item-content {
     width: 100%;
     position: relative;
@@ -262,42 +266,49 @@ footer {
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
+/* Title within timeline item */
 .timeline-item-content h4 {
     margin-top: 0;
 }
 
+/* Subtitle within timeline item */
 .timeline-item-subtitle {
     font-size: 16px;
     margin-top: 5px;
 }
 
+/* Date within timeline item */
 .timeline-item-date {
     font-size: 14px;
     color: #666;
     margin-top: 5px;
 }
 
+/* Dot before each timeline item */
 .timeline-item::before {
     content: "";
     position: absolute;
-    left: -7px;
+    left: -7px; /* Adjust the position of the dot */
     top: 5px;
     width: 20px;
     height: 20px;
-    background: #ff8000;
+    background: #ff8000; /* Dot color */
     border-radius: 50%;
     z-index: 1;
 }
 
+/* Description text within timeline item */
 .timeline-item-description {
-    display: none;
+    display: none; /* Hide the description by default */
     margin-top: 10px;
     font-size: 16px;
 }
 
+/* Toggle button to show/hide description */
 .toggle-description {
     margin-top: 10px;
 }
+
 
 /* Adjust placement of the timeline items */
 @media (min-width: 768px) {
