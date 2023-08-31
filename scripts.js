@@ -58,21 +58,24 @@ const workExperiences = [
         location: "L'Aquila, Italy",
         position: "MASTER THESIS | CYBERSECURITY FOR AUTOMOTIVE",
         company: "LEONARDO",
-        description: "My work revolves around ensuring the Cybersecurity of vehicles, encompassing the protection of the entire ecosystem, from onboard systems to remote infrastructures used for management and updates. I am currently collaborating with my university and Leonardo Spa to introduce intrusion analysis into vehicle fleets through the development of a novel technology."
+        description: "My work revolves around ensuring the Cybersecurity of vehicles, encompassing the protection of the entire ecosystem, from onboard systems to remote infrastructures used for management and updates. I am currently collaborating with my university and Leonardo Spa to introduce intrusion analysis into vehicle fleets through the development of a novel technology.",
+        logo:"leonardo"
     },
     {
         date: "23/01/2023 – 26/05/2023",
         location: "Göteborg, Sweden",
         position: "INTERN | CORE SYSTEM APPLICATION INTEGRATION",
         company: "VOLVO CARS CORPORATION",
-        description: "I worked with further development of test activities to enable test automation and Continuous Integration (CI) for Volvo Cars ECUs. I was engaged with the entire process from design of test infrastructure to analyze test results when the HIL rigs are up and running in the CI environment. We developed as a team tool chains for test automation and test cases to verify the ECU SW in Python, Robot Framework or CAPL. Moreover, I got experience with SW version control (Git/Gerrit), CANoe and got the occasion to further deepen my knowledge in Simulink. As an intern in an Agile development team I not only gained a broad understanding of Volvo Cars vehicle systems and electrical functions but also about SAFe and all the Scrum cerimonies (Sprint Planning, Daily Standups, Sprint retrospectives, Sprint Demos, Story Grooming ecc..)."
+        description: "I worked with further development of test activities to enable test automation and Continuous Integration (CI) for Volvo Cars ECUs. I was engaged with the entire process from design of test infrastructure to analyze test results when the HIL rigs are up and running in the CI environment. We developed as a team tool chains for test automation and test cases to verify the ECU SW in Python, Robot Framework or CAPL. Moreover, I got experience with SW version control (Git/Gerrit), CANoe and got the occasion to further deepen my knowledge in Simulink. As an intern in an Agile development team I not only gained a broad understanding of Volvo Cars vehicle systems and electrical functions but also about SAFe and all the Scrum cerimonies (Sprint Planning, Daily Standups, Sprint retrospectives, Sprint Demos, Story Grooming ecc..).",
+        logo:"volvo"
     },
     {
         date: "09/04/2021 – 09/07/2021",
         location: "Rome, Italy",
         position: "ICT INTERNSHIP",
         company: "VANTEA SPA",
-        description: "Main goals:\nProject and realization of specific Software solutions with languages of scripting related to specific applications\nAnalysis of the characteristics of the application to develop (structure, relations, processes)\nTest of the modules of the application that makes up the solution.\nDocumentation of the development phases and test results\nBusiness or Sector Information and communication"
+        description: "Main goals:\nProject and realization of specific Software solutions with languages of scripting related to specific applications\nAnalysis of the characteristics of the application to develop (structure, relations, processes)\nTest of the modules of the application that makes up the solution.\nDocumentation of the development phases and test results\nBusiness or Sector Information and communication",
+        logo:"vantea"
     }
 ];
 
@@ -91,7 +94,12 @@ const workExperiences = [
             <p class="timeline-item-subtitle">${experience.company} | ${experience.location}</p>
             <p class="timeline-item-date">${experience.date}</p>
             <button class="btn btn-primary toggle-description" style="background-color: #ff8000;">Toggle Description</button>
-            <p class="timeline-item-description">${experience.description}</p>
+
+                <img src="${experience.logo}.png" alt="${experience.company} Logo" class="company-logo">
+            
+            
+                <p class="timeline-item-description">${experience.description}</p>
+            
         `;
 
         timelineItem.appendChild(timelineItemContent);
