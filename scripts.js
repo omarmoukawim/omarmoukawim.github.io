@@ -224,7 +224,29 @@ document.querySelectorAll('a.nav-link, a.timeline-link').forEach(anchor => {
         }, 1000);
     });
 });
+document.addEventListener("DOMContentLoaded", function() {
+    const backToTopButton = document.getElementById("back-to-top-button");
 
+    // Add an event listener for the button click
+    backToTopButton.addEventListener("click", function() {
+        // Scroll to the top of the page smoothly
+        window.scrollTo({
+            top: 0,
+            behavior: "smooth"
+        });
+    });
+
+    // Detect scrolling to show/hide the button
+    window.addEventListener("scroll", function() {
+        if (window.scrollY >= 300) {
+            // Show the button when scrolled down
+            backToTopButton.style.display = "block";
+        } else {
+            // Hide the button when near the top
+            backToTopButton.style.display = "none";
+        }
+    });
+});
 
 
 
