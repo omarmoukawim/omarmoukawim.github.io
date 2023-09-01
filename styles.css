@@ -264,6 +264,8 @@ footer {
     padding: 20px;
     border-radius: 5px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    
+    
 }
 
 /* Title within timeline item */
@@ -361,4 +363,17 @@ footer {
     width: 800px; /* Adjust the width of the picture */
     display: block;
     margin: 0 auto;
+}
+.company-logo-container {
+    display: flex;
+    justify-content: flex-end; /* Align to the upper right corner */
+    margin-bottom: 10px; /* Add some spacing */
+    position: relative; /* Required for proper positioning */
+}
+
+.company-logo {
+    width: 150px; /* Adjust the width of the logo image */
+    height: auto; /* Allow height to adjust proportionally */
+    float: right; /* Float the logo to the right */
+    margin-top: -75px;
 }
