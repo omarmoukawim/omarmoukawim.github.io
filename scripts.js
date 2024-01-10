@@ -133,7 +133,7 @@ const workExperiences = [
             location: "L'Aquila, Italy",
             position: "MASTER’S DEGREE IN INFORMATION AND AUTOMATION ENGINEERING - 'CONTROL SYSTEM ENGINEERING'  CURRICULUM",
             company: "University of L'Aquila",
-            grade:"110 cum laude/110",
+            grade:"Final grade : 110 cum laude/110",
             description: "The 'Control System Engineering 'curriculum is aimed at developing skills for modeling, identification, analysis, control and optimization of systems, in complex contexts, such as that of robotics or dedicated electronic devices (or 'embedded'), in order to design, manage and supervise automated control systems."
         },
         {
@@ -141,7 +141,7 @@ const workExperiences = [
             location: "L'Aquila, Italy",
             position: "BACHELOR’S DEGREE IN INFORMATION ENGINEERING - AUTOMATION CURRICULUM",
             company: "University of L'Aquila",
-            grade:"110/110",
+            grade:"Final grade : 110/110",
             description: "The preparation allows you to understand the operating principles of modern electronic (both analog and digital), robotics, control, information processing and telecommunication systems. Following the automation branch gave me the opportunity to learn particularly about Industrial Robotics, Electric Machines, Control Systems and Power Electronics"
         },
         {
