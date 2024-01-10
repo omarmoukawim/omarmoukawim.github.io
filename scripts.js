@@ -133,6 +133,7 @@ const workExperiences = [
             location: "L'Aquila, Italy",
             position: "MASTER’S DEGREE IN INFORMATION AND AUTOMATION ENGINEERING - 'CONTROL SYSTEM ENGINEERING'  CURRICULUM",
             company: "University of L'Aquila",
+            grade:"110 cum laude/110",
             description: "The 'Control System Engineering 'curriculum is aimed at developing skills for modeling, identification, analysis, control and optimization of systems, in complex contexts, such as that of robotics or dedicated electronic devices (or 'embedded'), in order to design, manage and supervise automated control systems."
         },
         {
@@ -140,6 +141,7 @@ const workExperiences = [
             location: "L'Aquila, Italy",
             position: "BACHELOR’S DEGREE IN INFORMATION ENGINEERING - AUTOMATION CURRICULUM",
             company: "University of L'Aquila",
+            grade:"110/110",
             description: "The preparation allows you to understand the operating principles of modern electronic (both analog and digital), robotics, control, information processing and telecommunication systems. Following the automation branch gave me the opportunity to learn particularly about Industrial Robotics, Electric Machines, Control Systems and Power Electronics"
         },
         {
@@ -174,12 +176,13 @@ const workExperiences = [
         timelineItemContent.classList.add("timeline-item-content");
     
         timelineItemContent.innerHTML = `
-            <h4>${item.position}</h4>
-            <p class="timeline-item-subtitle">${item.company} | ${item.location}</p>
-            <p class="timeline-item-date">${item.date}</p>
-            <button class="btn btn-primary toggle-description" style="background-color: #ff8000;">Toggle Description</button>
-            <p class="timeline-item-description">${item.description}</p>
-        `;
+        <h4>${item.position}</h4>
+        <p class="timeline-item-subtitle">${item.company} | ${item.location} ${item.grade ? `| <strong>${item.grade}</strong>` : ''}</p>
+        <p class="timeline-item-date">${item.date}</p>
+        <button class="btn btn-primary toggle-description" style="background-color: #ff8000;">Toggle Description</button>
+        <p class="timeline-item-description">${item.description}</p>
+    `;
+    
     
         timelineItem.appendChild(timelineItemContent);
         educationTimeline.appendChild(timelineItem);
