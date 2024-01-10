@@ -54,7 +54,7 @@ document.addEventListener("DOMContentLoaded", async function () {
 // Populate work experience timeline
 const workExperiences = [
     {
-        date: "1/07/2023 – CURRENT",
+        date: "1/07/2023 – 31/12/2023",
         location: "L'Aquila, Italy",
         position: "MASTER THESIS | CYBERSECURITY FOR AUTOMOTIVE",
         company: "LEONARDO",
