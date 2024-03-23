@@ -54,9 +54,17 @@ document.addEventListener("DOMContentLoaded", async function () {
 // Populate work experience timeline
 const workExperiences = [
     {
+        date: "04/03/2024 – Present",
+        location: "Chieti, Italy",
+        position: "CYBERSECURITY ENGINEER - RED TEAM | FULL-TIME",
+        company: "LEONARDO",
+        description: "Consistently conducting detailed Vulnerability Assessments on client systems, our team employs a comprehensive approach that includes implementing DAST, SAST, and WAPTs methodologies. Through these efforts, we fortify our clients' systems against the ever-evolving landscape of cyber threats. Furthermore, our expertise extends to executing thorough WAPT initiatives, where we try to unveil previously undetected vulnerabilities, ultimately enhancing the overall security posture of our clients' projects.",
+        logo:"leonardo"
+    },
+    {
         date: "1/07/2023 – 31/12/2023",
         location: "L'Aquila, Italy",
-        position: "MASTER THESIS | CYBERSECURITY FOR AUTOMOTIVE",
+        position: "CYBERSECURITY FOR AUTOMOTIVE | MASTER THESIS ",
         company: "LEONARDO",
         description: "My work revolves around ensuring the Cybersecurity of vehicles, encompassing the protection of the entire ecosystem, from onboard systems to remote infrastructures used for management and updates. I am currently collaborating with my university and Leonardo Spa to introduce intrusion analysis into vehicle fleets through the development of a novel technology.",
         logo:"leonardo"
@@ -64,7 +72,7 @@ const workExperiences = [
     {
         date: "23/01/2023 – 26/05/2023",
         location: "Göteborg, Sweden",
-        position: "INTERN | CORE SYSTEM APPLICATION INTEGRATION",
+        position: "CORE SYSTEM APPLICATION INTEGRATION | INTERN",
         company: "VOLVO CARS CORPORATION",
         description: "I worked with further development of test activities to enable test automation and Continuous Integration (CI) for Volvo Cars ECUs. I was engaged with the entire process from design of test infrastructure to analyze test results when the HIL rigs are up and running in the CI environment. We developed as a team tool chains for test automation and test cases to verify the ECU SW in Python, Robot Framework or CAPL. Moreover, I got experience with SW version control (Git/Gerrit), CANoe and got the occasion to further deepen my knowledge in Simulink. As an intern in an Agile development team I not only gained a broad understanding of Volvo Cars vehicle systems and electrical functions but also about SAFe and all the Scrum cerimonies (Sprint Planning, Daily Standups, Sprint retrospectives, Sprint Demos, Story Grooming ecc..).",
         logo:"volvo"
