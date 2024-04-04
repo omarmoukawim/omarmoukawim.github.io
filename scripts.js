@@ -77,14 +77,7 @@ const workExperiences = [
         description: "I worked with further development of test activities to enable test automation and Continuous Integration (CI) for Volvo Cars ECUs. I was engaged with the entire process from design of test infrastructure to analyze test results when the HIL rigs are up and running in the CI environment. We developed as a team tool chains for test automation and test cases to verify the ECU SW in Python, Robot Framework or CAPL. Moreover, I got experience with SW version control (Git/Gerrit), CANoe and got the occasion to further deepen my knowledge in Simulink. As an intern in an Agile development team I not only gained a broad understanding of Volvo Cars vehicle systems and electrical functions but also about SAFe and all the Scrum cerimonies (Sprint Planning, Daily Standups, Sprint retrospectives, Sprint Demos, Story Grooming ecc..).",
         logo:"volvo"
     },
-    {
-        date: "09/04/2021 – 09/07/2021",
-        location: "Rome, Italy",
-        position: "ICT INTERNSHIP",
-        company: "VANTEA SPA",
-        description: "Main goals:\nProject and realization of specific Software solutions with languages of scripting related to specific applications\nAnalysis of the characteristics of the application to develop (structure, relations, processes)\nTest of the modules of the application that makes up the solution.\nDocumentation of the development phases and test results\nBusiness or Sector Information and communication",
-        logo:"vantea"
-    }
+
 ];
 
     const workExperienceSection = document.getElementById("work-experience");
