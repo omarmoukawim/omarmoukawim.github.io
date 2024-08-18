@@ -23,7 +23,7 @@ jobs:
     - name: Fetch Repository Data
       env:
         GH_TOKEN: ${{ secrets.GH_TOKEN }}
-      run: node fetchRepos.js
+      run: node fetchRepos.mjs
 
     - name: Commit and Push Changes
       run: |
