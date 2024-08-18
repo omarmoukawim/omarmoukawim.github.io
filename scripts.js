@@ -1,55 +1,43 @@
 
 
 document.addEventListener("DOMContentLoaded", async function () {
-    try {
-      // Fetch project data from your GitHub repository
-      const response = await fetch("https://api.github.com/users/omarmoukawim/repos", {
-        headers: {
-          Authorization: `Bearer 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`,//salvata su blocco note in cartella desktop e anche nel file config
-        },
-      });
-  
-      const data = await response.json();
-      const projectList = document.getElementById("project-list");
-  
-      data.forEach(async (repo) => {
-        const readmeUrl = `https://api.github.com/repos/${repo.full_name}/readme`;
-        const readmeResponse = await fetch(readmeUrl); // Fetch README content
-        const readmeData = await readmeResponse.json();
-        const readmeContent = atob(readmeData.content); // Decode base64 content
-  
-        const projectCard = document.createElement("div");
-        projectCard.classList.add("col-md-4", "project-card");
-  
-        projectCard.innerHTML = `
-          <h3>${repo.name}</h3>
-          <button class="btn btn-primary toggle-description">Toggle Description</button>
-          <p class="timeline-item-description">${readmeContent || "No README content available."}</p>
-          <a href="${repo.html_url}" target="_blank">View on GitHub</a>
-        `;
-  
-        projectList.appendChild(projectCard);
-  
-        const toggleButton = projectCard.querySelector(".toggle-description");
-        const description = projectCard.querySelector(".timeline-item-description");
-  
-        // Hide the description by default
-        description.style.display = "none";
-  
-        // Toggle the description visibility on button click
-        toggleButton.addEventListener("click", function () {
-          if (description.style.display === "none") {
-            description.style.display = "block";
-          } else {
-            description.style.display = "none";
-          }
-        });
-      });
-    } catch (error) {
-      console.error("Error:", error);
-    }
-  });
+  try {
+    const response = await fetch("repos.json");
+    const data = await response.json();
+    const projectList = document.getElementById("project-list");
 
+    data.forEach((repo) => {
+      const projectCard = document.createElement("div");
+      projectCard.classList.add("col-md-4", "project-card");
+
+      projectCard.innerHTML = `
+        <h3>${repo.name}</h3>
+        <button class="btn btn-primary toggle-description">Toggle Description</button>
+        <p class="timeline-item-description">${repo.readme || "No README content available."}</p>
+        <a href="${repo.html_url}" target="_blank">View on GitHub</a>
+      `;
+
+      projectList.appendChild(projectCard);
+
+      const toggleButton = projectCard.querySelector(".toggle-description");
+      const description = projectCard.querySelector(".timeline-item-description");
+
+      // Hide the description by default
+      description.style.display = "none";
+
+      // Toggle the description visibility on button click
+      toggleButton.addEventListener("click", function () {
+        if (description.style.display === "none") {
+          description.style.display = "block";
+        } else {
+          description.style.display = "none";
+        }
+      });
+    });
+  } catch (error) {
+    console.error("Error:", error);
+  }
+});
 
 // Populate work experience timeline
 const workExperiences = [
