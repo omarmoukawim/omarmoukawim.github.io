@@ -23,8 +23,8 @@ jobs:
         npm init -y
         npm install @octokit/rest
         node -e "
-        import { Octokit } from '@octokit/rest';
-        import fs from 'fs/promises';
+        const { Octokit } = require('@octokit/rest');
+        const fs = require('fs').promises;
 
         const octokit = new Octokit({ auth: process.env.GH_TOKEN });
 
