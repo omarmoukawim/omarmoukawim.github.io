@@ -1,0 +1,80 @@
+[
+  {
+    "name": "LLM_security",
+    "description": "Practical Jupyter notebooks from Andrew Ng and Giskard team's \"Red Teaming LLM Applications\" course on DeepLearning.AI.",
+    "html_url": "https://github.com/omarmoukawim/LLM_security",
+    "readme": "# Red Teaming LLM Applications\n\nAndrew Ng and Giskard team has recently released great course called [\"Red Teaming LLM Applications\"](https://learn.deeplearning.ai/courses/red-teaming-llm-applications) on DeepLearning.AI platform. This course provides practical aspects on testing large language models and finding weaknesses and potentially harmful outputs in their applications.\n\nI've followed the on-screen instructions to re-create their practical Jupyter notebooks and then adapted the code to run against **Azure OpenAI** service, as it has slightly different syntax in comparison to the original OpenAI endpoints.\n\nAdditionally, various references to **llama-index** classes were updated, to make the course's helper functions compatible with the latest llama-index **v0.10.x**.\n\n## Table of contents:\n- [Configuring solution environment](https://github.com/LazaUK/DeepLearningAI-Giskard-RedTeaming/tree/main#configuring-solution-environment)\n- [Lesson 1: Overview of LLM Vulnerabilities](https://github.com/LazaUK/DeepLearningAI-Giskard-RedTeaming/tree/main#lesson-1-overview-of-llm-vulnerabilities)\n- [Lesson 2: Red Teaming LLMs](https://github.com/LazaUK/DeepLearningAI-Giskard-RedTeaming/tree/main#lesson-2-red-teaming-llms)\n- [Lesson 3: Red Teaming at Scale](https://github.com/LazaUK/DeepLearningAI-Giskard-RedTeaming/tree/main#lesson-3-red-teaming-at-scale)\n- [Lesson 4: Red Teaming LLMs with LLMs](https://github.com/LazaUK/DeepLearningAI-Giskard-RedTeaming/tree/main#lesson-4-red-teaming-llms-with-llms)\n- [Lesson 5: A Full Red Teaming Assessment](https://github.com/LazaUK/DeepLearningAI-Giskard-RedTeaming/tree/main#lesson-5-a-full-red-teaming-assessment)\n\n## Configuring solution environment\n1. To use Azure OpenAI backend, assign the API endpoint name, key and version, along with the Azure OpenAI deployment names of GPT and Embedding models to **AZURE_OPENAI_API_BASE**, **AZURE_OPENAI_API_KEY**, **AZURE_OPENAI_API_VERSION**, **AZURE_OPENAI_API_DEPLOY** (for GPT) and **AZURE_OPENAI_API_DEPLOY_EMBED** (for Embedding) environment variables respectively.\n2. Install the required Python packages, by using the **pip** command and the provided requirements.txt file.\n```\npip install -r requirements.txt\n```\n\n## Lesson 1: Overview of LLM Vulnerabilities\nFirst lesson provides an overview of LLM vulnerabilities. It describes hypothetical scenarios, causes of observed behaviour and potential impact. Four main categories of described LLM vulnerabilities are:\n- Bias and stereotypes;\n- Sensitive information disclosure;\n- Service disruption;\n- Hallucinations.\n\n## Lesson 2: Red Teaming LLMs\nSecond lesson focuses on the aspects of LLM Red Teaming. It explores different techniques to bypass the model's safeguards:\n- Exploiting text completion;\n- Using biased prompts;\n- Direct prompt injection;\n- Grey box prompt attacks;\n- Advanced technique: prompt probing.\n\n## Lesson 3: Red Teaming at Scale\nThird lesson is about automation approaches for the Prompt Injection attacks;\n- Manually defined injection techniques;\n- Using library of prompts;\n- Giskard's LLM scan.\n\n## Lesson 4: Red Teaming LLMs with LLMs\nFourth lesson is about the use of LLM to automate the Red Teaming process. Here you can find how to use custom scripting to automate generation of adversarial inputs and evaluation of the app's outputs. Then it's shown how the same process can be automated by using Giskard's Python library.\n\n## Lesson 5: A Full Red Teaming Assessment\nFifth lesson provides an example of a full Red Teaming assessment. It consists of 2 rounds:\n- Round one is about more general probing of the company bot, to search for any signs of vulnerabilities in various categories, e.g. toxicity and offensive content, off-topic content, excessive agency, sensitive information disclosure, etc. You can use either custom prompts or automate prompts generation with Giskard's Python library;\n- Round two is about exploiting specific functionality, e.g. prompt injection, to achieve a malicious goal. In this fictitious scenario, we persuade the bot to refund the order, even if it's not eligible any more.\n"
+  },
+  {
+    "name": "MPPT-array-control-real-time",
+    "description": null,
+    "html_url": "https://github.com/omarmoukawim/MPPT-array-control-real-time",
+    "readme": "This project aimed at simulating photovoltaic (PV) arrays and a boost\nconverter in Simulink, integrating the Perturb and Observe (P&O) algorithm for\nMaximum Power Point Tracking (MPPT) running on a Texas Instruments board, in particu\u0002lar, the LAUNCHXL-F28379D development kit.  The serial communication between MATLAB and the Texas Instruments board for the purpose of achieving a Processor-in-the-Loop (PiL) simulation has been implemented too.\nAfter simulating the regular P&O an enhanced version of it has been implemented: the variable step version, this to overcome problems that arise in partial shading scenarios.\n"
+  },
+  {
+    "name": "Wireless-transmission-fading-channel",
+    "description": null,
+    "html_url": "https://github.com/omarmoukawim/Wireless-transmission-fading-channel",
+    "readme": "# Wireless-transmission-fading-channel\nIn this project the task was to observe how varying the symbol transmitting power affected the BER (Bit error rate). Different symbol lengths and modulations were analyzed (BPSK, 4/8/16/64 PSK and 4/8/16/64 QAM) and the transmission was simulated over Rayleigh, Rician and Gaussian channels.\n\nDURATION: 1 month\n"
+  },
+  {
+    "name": "Drone-trajectory-tracking",
+    "description": null,
+    "html_url": "https://github.com/omarmoukawim/Drone-trajectory-tracking",
+    "readme": "The goal of this project was to successfully control the trajectory of a Crazyflie 2.X drone\nfrom a target PC exploiting data from the Motion Capture system (MoCap) that is streamed by\nanother PC; four infrared cameras were available for the tracking.The use of data from the drone expansion deck combined with the real-time measurements from the MoCap system allowed the\ndrone to follow a target trajectory starting at any given point in the range of view of the Optitrack\ncameras.\nVideo:https://www.youtube.com/shorts/X5SEyiHJuqA\n"
+  },
+  {
+    "name": "Wind-turbine-control",
+    "description": null,
+    "html_url": "https://github.com/omarmoukawim/Wind-turbine-control",
+    "readme": "\nThe sampled and quantized control of the wind turbine has been developed during my Control of Energy Systems course that I have taken in my first semester of Master's degree. We had the complete mathematical model and by means of a PI control the overall system has been not only stabilized but made robust to noise introduced by wind too.\n\n\n"
+  },
+  {
+    "name": "Phone-rotation-streaming-matlab",
+    "description": null,
+    "html_url": "https://github.com/omarmoukawim/Phone-rotation-streaming-matlab",
+    "readme": "This was a personal project that I have undertaken in order to fully understant Heuler rotation matrixes and gain hands on experience on the live streaming of data from a mobile phone to the Matlab environment runnig on PC. The scripts collect data streamed from the phone (rotation along the axes) and replicate the rotations that the phone has on a matlab plot containing a 3d mesh i have done of my phone.This project was done in my last bachelor's year.\n\nDURATION: 3 months\n"
+  },
+  {
+    "name": "1-525-gear-ratio",
+    "description": null,
+    "html_url": "https://github.com/omarmoukawim/1-525-gear-ratio",
+    "readme": "Full project and realization of a 1:525 gear train device to analyze its behavior. The gears and the stand were realized in Fusion 360, and everything was printed on my Anycubic i3 Mega s 3d printer.  Small gear 10 teeth, big gear 35 teeth.\n\nVideo: https://www.youtube.com/shorts/Qgbeii4Fpx4\n"
+  },
+  {
+    "name": "Common-base-amplifier-LTspice",
+    "description": null,
+    "html_url": "https://github.com/omarmoukawim/Common-base-amplifier-LTspice",
+    "readme": "This is my final project for my Electronics II course of my last semester of bachelor's degree. In it I had to correctly project and simulate a common base amplifier on Lt Spice. For the amplifier a 20 dB gain and 1kHz cutoff frequency were requested.\n\nDURATION:1 month\n"
+  },
+  {
+    "name": "Electric-Vehicle-hybrid-fuel-cell",
+    "description": null,
+    "html_url": "https://github.com/omarmoukawim/Electric-Vehicle-hybrid-fuel-cell",
+    "readme": "This is my final project fot the Control of energy systems course of the first semester of my first year of master course in Control systems engineering at Università degli studi dell'aquila. I simulated on Simulink a Hydrogen Fuel Cell and Ultracapacitor Based Electric Power System Sliding Mode Control in an Electric Vehicle Application.\n\nDURATION: 2 months\n"
+  },
+  {
+    "name": "Power-electronics-multilevel-inverters",
+    "description": null,
+    "html_url": "https://github.com/omarmoukawim/Power-electronics-multilevel-inverters",
+    "readme": "The inverter simulink models were made after I had taken my bachelor's course in Power electronics to actually verify the theoretical knowledge I had acquired in lectures. \n\nDURATION: 2 weeks\n"
+  },
+  {
+    "name": "BLE-sniffing",
+    "description": null,
+    "html_url": "https://github.com/omarmoukawim/BLE-sniffing",
+    "readme": "This is my final project fot the Embedded systems course of the first semester of my first year of master course in Control systems engineering at\nUniversità degli studi dell'aquila.\nThe aim of this project was to analyze Bluetooth Low Energy (BLE) packets sent from different transmitting devices in different environments to analyze packet losses and RSSIs.\n\nDURATION: 3 months\n"
+  },
+  {
+    "name": "DC-motor-control",
+    "description": null,
+    "html_url": "https://github.com/omarmoukawim/DC-motor-control",
+    "readme": "In this project the model of a DC motor has been analyzed to control its velocity. All has been implemented in Simulink.The Simulink model is simulated to analyze the performance of the velocity control system. Various parameters such as rise time, settling time, overshoot, and steady-state error are calculated to assess the controller's effectiveness. The control of the velocity has been succesfully designed.\n\nDURATION: 3 weeks\n"
+  },
+  {
+    "name": "Jparcheggio",
+    "description": null,
+    "html_url": "https://github.com/omarmoukawim/Jparcheggio",
+    "readme": "This is my final project fot the Object oriented programming course of the first semester of my second year of bachelor's course in Information engineering at Università degli studi dell'aquila. In this java project a parking lot was implemented with all the classes for vehicles, floors of the parking ecc.\n\nDURATION: 2 months\n"
+  }
+]
