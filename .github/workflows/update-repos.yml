@@ -9,21 +9,22 @@ jobs:
   update-repo-list:
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v2
+    - uses: actions/checkout@v3
 
     - name: Set up Node.js
-      uses: actions/setup-node@v2
+      uses: actions/setup-node@v3
       with:
-        node-version: '14'
+        node-version: '18'
 
     - name: Fetch Repository Data
       env:
         GH_TOKEN: ${{ secrets.GH_TOKEN }}
       run: |
+        npm init -y
         npm install @octokit/rest
-        node << EOF
-        const { Octokit } = require("@octokit/rest");
-        const fs = require('fs');
+        node -e "
+        import { Octokit } from '@octokit/rest';
+        import fs from 'fs/promises';
 
         const octokit = new Octokit({ auth: process.env.GH_TOKEN });
 
@@ -53,16 +54,16 @@ jobs:
                 name: repo.name,
                 description: repo.description,
                 html_url: repo.html_url,
-                readme: "No README available."
+                readme: 'No README available.'
               };
             }
           }));
 
-          fs.writeFileSync('repos.json', JSON.stringify(repoData, null, 2));
+          await fs.writeFile('repos.json', JSON.stringify(repoData, null, 2));
         }
 
         fetchRepos().catch(console.error);
-        EOF
+        "
 
     - name: Commit and Push Changes
       run: |
