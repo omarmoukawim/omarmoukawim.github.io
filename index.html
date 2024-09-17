@@ -10,37 +10,37 @@
 
 </head>
 <body>
-    <nav class="navbar navbar-expand-lg navbar-dark">
-    <div class="container">
-        <a class="navbar-brand" href="#">Omar's Portfolio 👋</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+        <div class="container">
+          <a class="navbar-brand" href="#">Omar's Portfolio <span class="wave">👋</span></a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
-            <ul class="navbar-nav">
-                <li class="nav-item">
-                    <a class="nav-link" href="#header">Home</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#projects">Projects</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#skills">Skills</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#control-passion">Why control systems?</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#about-me">About me</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#contact">Contact</a>
-                </li>
-                
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+              <li class="nav-item">
+                <a class="nav-link" href="#header">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#projects">Projects</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#skills">Skills</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#control-passion">Why control systems?</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#about-me">About me</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#contact">Contact</a>
+              </li>
             </ul>
+          </div>
         </div>
-    </div>
-</nav>
+      </nav>
+      
 
 
     <section id="header" class="header">
@@ -85,145 +85,151 @@
         </div>
     </section>
 
-
-    <section id="skills" class ="skills">
+    
+    <section id="skills" class="skills">
         <div class="container">
             <h2 class="section-header text-center mb-5">Skills</h2>
-            <div class="skills-list">
-                <div class="skill">
-                    <div class="skill-icon"><i class="fas fa-code"></i></div>
-                    <div class="skill-name"><b>Coding</b></div>
-                    <ul class="list-unstyled">
-                        <li>Python</li>
-                        <div class="skill-bar-container">
-                            <div class="skill-bar" style="width: 85%;"></div>
-                        </div>
-                        <li>Java</li>
-                        <div class="skill-bar-container">
-                            <div class="skill-bar" style="width: 70%;"></div>
-                        </div>
-                        <li>C</li>
-                        <div class="skill-bar-container">
-                            <div class="skill-bar" style="width: 80%;"></div>
-                        </div>
-                        <li>Matlab & Simulink</li>
-                        <div class="skill-bar-container">
-                            <div class="skill-bar" style="width: 90%;"></div>
-                        </div>
-                        <li>Verilog/VHDL</li>
-                        <div class="skill-bar-container">
-                            <div class="skill-bar" style="width: 60%;"></div>
-                        </div>
-                        <li>Canoe/CAPL</li>
-                        <div class="skill-bar-container">
-                            <div class="skill-bar" style="width: 65%;"></div>
-                        </div>
-                        
-                        <li>Web Development (HTML, CSS, JavaScript)</li>
-                        <div class="skill-bar-container">
-                            <div class="skill-bar" style="width: 55%;"></div>
-                        </div>
-                        <!-- Add more languages -->
-                    </ul>
+    
+            <!-- Coding Skills -->
+            <div class="skill-section">
+                <button class="btn btn-primary btn-block text-left" type="button" data-toggle="collapse" data-target="#codingSkills" aria-expanded="false" aria-controls="codingSkills">
+                    <i class="fas fa-code"></i> Coding Skills
+                </button>
+                <div class="collapse" id="codingSkills">
+                    <div class="card card-body">
+                        <ul class="list-unstyled">
+                            <li><i class="fas fa-code"></i> Python (Data Analysis, Machine Learning, Web Development)</li>
+                            <li><i class="fas fa-code"></i> Java (Object-Oriented Programming)</li>
+                            <li><i class="fas fa-microchip"></i> C (Embedded Systems, Low-level Programming)</li>
+                            <li><i class="fas fa-calculator"></i> MATLAB & Simulink (Signal Processing, Control Systems)</li>
+                            <li><i class="fas fa-microchip"></i> Verilog/VHDL (Digital Circuit Design, FPGA Programming)</li>
+                            <li><i class="fas fa-car"></i> CANoe/CAPL (Automotive Network Analysis, ECU Simulation)</li>
+                            <li><i class="fas fa-laptop-code"></i> Web Development (HTML5, CSS3, JavaScript)</li>
+                            <li><i class="fas fa-database"></i> SQL (Database Design, Query Optimization)</li>
+                            <li><i class="fas fa-code-branch"></i> Version Control (Git, GitHub)</li>
+                        </ul>
+                    </div>
                 </div>
-
-                <div class="skill">
-                   <div class="skill-icon"><i class="fas fa-language"></i></div>
-                   <div class="skill-name"><b>Spoken Languages</b></div>
-                   <ul class="list-unstyled">
-                      <li>English (C1)</li>
-                      <div class="skill-bar-container">
-                        <div class="skill-bar" style="width: 95%;"></div>
-                    </div>
-                      <li>Italian (MT)</li>
-                      <div class="skill-bar-container">
-                        <div class="skill-bar" style="width: 100%;"></div>
-                    </div>
-                      <li>French (B1)</li>
-                      <div class="skill-bar-container">
-                        <div class="skill-bar" style="width: 70%;"></div>
-                    </div>
-                      <li>Arabic (A2)</li>
-                      <div class="skill-bar-container">
-                        <div class="skill-bar" style="width: 40%;"></div>
-                    </div>
-                    <!-- Add more spoken languages -->
-                </ul>
             </div>
-            <div class="skill">
-                <div class="skill-icon"><i class="fas fa-users"></i></div>
-                <div class="skill-name"><b>Soft Skills</b></div>
-                <ul class="list-unstyled">
-                    <li>Communication</li>
-                    <div class="skill-bar-container">
-                        <div class="skill-bar" style="width: 85%;"></div>
+    
+            <!-- Cybersecurity Skills -->
+            <div class="skill-section">
+                <button class="btn btn-primary btn-block text-left" type="button" data-toggle="collapse" data-target="#cyberSkills" aria-expanded="false" aria-controls="cyberSkills">
+                    <i class="fas fa-shield-alt"></i> Cybersecurity Skills
+                </button>
+                <div class="collapse" id="cyberSkills">
+                    <div class="card card-body">
+                        <ul class="list-unstyled">
+                            <li><i class="fas fa-user-secret"></i> Penetration Testing & Ethical Hacking</li>
+                            <li><i class="fas fa-lock"></i> Red Team Operations & Offensive Security</li>
+                            <li><i class="fas fa-file-code"></i> Secure Code Review & SAST/DAST Implementation</li>
+                            <li><i class="fas fa-bug"></i> Vulnerability Assessment & Management</li>
+                            <li><i class="fas fa-terminal"></i> Network Security (Firewalls, IDS/IPS, VPNs)</li>
+                            <li><i class="fas fa-database"></i> Web Application Security </li>
+                            <li><i class="fas fa-terminal"></i> Cryptography & Encryption Protocols</li>
+                            <li><i class="fas fa-database"></i> Security Information and Event Management (SIEM)</li>
+                        </ul>
                     </div>
-                    <li>Problem Solving</li>
-                    <div class="skill-bar-container">
-                        <div class="skill-bar" style="width: 90%;"></div>
-                    </div>
-                    <li>Teamwork</li>
-                    <div class="skill-bar-container">
-                        <div class="skill-bar" style="width: 90%;"></div>
-                    </div>
-                    <li>Project Management</li>
-                    <div class="skill-bar-container">
-                        <div class="skill-bar" style="width: 90%;"></div>
-                    </div>
-                    <li>Adaptability</li>
-                    <div class="skill-bar-container">
-                        <div class="skill-bar" style="width: 95%;"></div>
-                    </div>
-                    <!-- Add more soft skills -->
-                </ul>
-            </div>
-            <div class="skill">
-                <div class="skill-icon"><i class="fas fa-code-branch"></i></div>
-                <div class="skill-name"><b>Version Control</b></div>
-                <div class="skill-bar-container">
-                    <div class="skill-bar" style="width: 70%;"></div>
                 </div>
-                <ul class="list-unstyled">
-                    <li>Git</li>
-                    <li>GitHub</li>
-                    <li>Gerrit</li>
-                    <li>Jenkins</li>
-                    <!-- Add more version control tools -->
-                </ul>
-                </div>
-                <div class="skill">
-    <div class="skill-icon"><i class="fas fa-database"></i></div>
-    <div class="skill-name"><b>Database Management</b></div>
-    <div class="skill-bar-container">
-        <div class="skill-bar" style="width: 70%;"></div>
-    </div>
-    <ul class="list-unstyled">
-        <li>SQL</li>
-        <li>MariaDB</li>
-        <li>Database Design</li>
-        <!-- Add more database skills -->
-    </ul>
-</div>
-<div class="skill">
-    <div class="skill-icon"><i class="fab fa-jira"></i></div>
-    <div class="skill-name"><b>Agile Project Management</b></div>
-    <div class="skill-bar-container">
-        <div class="skill-bar" style="width: 75%;"></div>
-    </div>
-    <ul class="list-unstyled">
-        <li>Jira</li>
-        <li>Confluence</li>
-        <li>Agile Software Development</li>
-        <!-- Add more related skills -->
-    </ul>
-</div>
-
             </div>
+    
+            <!-- Spoken Languages -->
+            <div class="skill-section">
+                <button class="btn btn-primary btn-block text-left" type="button" data-toggle="collapse" data-target="#languages" aria-expanded="false" aria-controls="languages">
+                    <i class="fas fa-language"></i> Spoken Languages
+                </button>
+                <div class="collapse" id="languages">
+                    <div class="card card-body">
+                        <ul class="list-unstyled">
+                            <li><i class="fas fa-comment"></i> English (C1 - Advanced: Fluent in professional and academic contexts)</li>
+                            <li><i class="fas fa-comment"></i> Italian (Native: Mastery in all aspects of the language)</li>
+                            <li><i class="fas fa-comment"></i> French (B1 - Intermediate: Can handle most travel and work situations)</li>
+                            <li><i class="fas fa-comment"></i> Arabic (A2 - Elementary: Basic communication in simple situations)</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+    
+            <!-- Soft Skills -->
+            <div class="skill-section">
+                <button class="btn btn-primary btn-block text-left" type="button" data-toggle="collapse" data-target="#softSkills" aria-expanded="false" aria-controls="softSkills">
+                    <i class="fas fa-users"></i> Soft Skills
+                </button>
+                <div class="collapse" id="softSkills">
+                    <div class="card card-body">
+                        <ul class="list-unstyled">
+                            <li><i class="fas fa-comments"></i> Effective Communication (Verbal, Written, Presentation Skills)</li>
+                            <li><i class="fas fa-lightbulb"></i> Critical Thinking & Problem Solving</li>
+                            <li><i class="fas fa-users"></i> Collaborative Teamwork & Leadership</li>
+                            <li><i class="fas fa-tasks"></i> Project Management (Agile, Scrum)</li>
+                            <li><i class="fas fa-sync-alt"></i> Adaptability & Continuous Learning</li>
+                            <li><i class="fas fa-clock"></i> Time Management & Prioritization</li>
+                            <li><i class="fas fa-hand-rock"></i> Conflict Resolution & Negotiation</li>
+                            <li><i class="fas fa-chart-line"></i> Analytical Thinking & Data Interpretation</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+    
+            <!-- Version Control -->
+            <div class="skill-section">
+                <button class="btn btn-primary btn-block text-left" type="button" data-toggle="collapse" data-target="#versionControl" aria-expanded="false" aria-controls="versionControl">
+                    <i class="fas fa-code-branch"></i> Version Control & CI/CD
+                </button>
+                <div class="collapse" id="versionControl">
+                    <div class="card card-body">
+                        <ul class="list-unstyled">
+                            <li><i class="fab fa-git"></i> Git (Branching Strategies, Merge Conflict Resolution)</li>
+                            <li><i class="fab fa-github"></i> GitHub (Pull Requests, Actions, Project Management)</li>
+                            <li><i class="fas fa-code-branch"></i> Gerrit (Code Review, Access Control)</li>
+                            <li><i class="fas fa-server"></i> Jenkins (Pipeline Creation, Build Automation)</li>
+                            <li><i class="fas fa-code-branch"></i> GitLab CI/CD (Pipeline Configuration, Container Registry)</li>
+                            <li><i class="fas fa-sync-alt"></i> Continuous Integration & Continuous Deployment Practices</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+    
+            <!-- Database Management -->
+            <div class="skill-section">
+                <button class="btn btn-primary btn-block text-left" type="button" data-toggle="collapse" data-target="#databaseSkills" aria-expanded="false" aria-controls="databaseSkills">
+                    <i class="fas fa-database"></i> Database Management
+                </button>
+                <div class="collapse" id="databaseSkills">
+                    <div class="card card-body">
+                        <ul class="list-unstyled">
+                            <li><i class="fas fa-database"></i> SQL (Complex Queries, Stored Procedures, Triggers)</li>
+                            <li><i class="fas fa-server"></i> MariaDB (Administration, Performance Tuning)</li>
+                            <li><i class="fas fa-database"></i> Database Design (Normalization, ER Diagrams)</li>
+                            <li><i class="fas fa-database"></i> NoSQL Databases (MongoDB, Cassandra)</li>
+                            <li><i class="fas fa-shield-alt"></i> Database Security (Access Control, Encryption)</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+    
+            <!-- Agile Project Management -->
+            <div class="skill-section">
+                <button class="btn btn-primary btn-block text-left" type="button" data-toggle="collapse" data-target="#agileSkills" aria-expanded="false" aria-controls="agileSkills">
+                    <i class="fas fa-project-diagram"></i> Agile Project Management
+                </button>
+                <div class="collapse" id="agileSkills">
+                    <div class="card card-body">
+                        <ul class="list-unstyled">
+                            <li><i class="fab fa-jira"></i> Jira (Workflow Customization, Reporting, Integration)</li>
+                            <li><i class="fas fa-book"></i> Confluence (Documentation, Knowledge Management)</li>
+                            <li><i class="fas fa-sitemap"></i> Scrum (Sprint Planning, Daily Stand-ups, Retrospectives)</li>
+                            <li><i class="fas fa-users"></i> Agile Team Facilitation & Coaching</li>
+                            <li><i class="fas fa-chart-bar"></i> Agile Metrics & Performance Tracking</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+    
         </div>
-
- 
-        
     </section>
+    
+
 <!-- Add this section below your existing sections -->
 <section id="control-passion" class="control-passion">
     <div class="container">

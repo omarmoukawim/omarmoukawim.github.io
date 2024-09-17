@@ -17,41 +17,48 @@ body {
 /* Navigation bar styles */
 .navbar {
     background-color: #ff8000;
-    color: #fff;
-    padding: 20px 0;
-    border-bottom: 4px solid  #140800; /* Add a bottom border for the box effect */
-}
-.nav-item {
-    color: #fff
-}
-
-.navbar-brand {
-    font-size: 24px;
+    padding: 15px 0;
+    transition: all 0.3s ease;
+  }
+  
+  .navbar-brand {
     font-weight: bold;
-    text-decoration: none;
-    color: #fff;
-}
-
-.navbar-nav {
-    list-style: none;
-}
-
-.navbar-nav li {
-    margin-right: 20px;
-}
-
-.navbar-nav a {
-    text-decoration: none;
-    color: #ffffff;
-    font-size: 18px;
-    padding: 10px 20px; /* Add padding to create a box effect */
-    border-radius: 5px; /* Add rounded corners */
-    transition: background-color 0.3s; /* Smooth background color transition */
-}
-
-.navbar-nav a:hover {
-    background-color: #140800;
-}
+    font-size: 1.5rem;
+  }
+  
+  .navbar-dark .navbar-nav .nav-link {
+    color: #ffffff !important;
+    font-weight: 500;
+    padding: 10px 15px;
+    border-radius: 5px;
+    transition: background-color 0.3s, color 0.3s;
+  }
+  
+  .navbar-dark .navbar-nav .nav-link:hover,
+  .navbar-dark .navbar-nav .nav-link:focus {
+    background-color: rgba(255, 255, 255, 0.2);
+    color: #ffffff !important;
+  }
+  
+  .wave {
+    display: inline-block;
+    animation: wave 0.5s infinite;
+  }
+  
+  @keyframes wave {
+    0%, 100% { transform: rotate(0deg); }
+    50% { transform: rotate(20deg); }
+  }
+  
+  /* Add some padding to the top of the body to account for the fixed navbar */
+  body {
+    padding-top: 70px;
+  }
+  
+  /* Optional: Add a shadow effect on scroll */
+  .navbar.scrolled {
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  }
 
 .contact-info ul {
     list-style: none;
@@ -176,6 +183,41 @@ p {
     color: #333;
 }
 
+.skill-section {
+    margin-bottom: 15px;
+    background-color: #ff6600 ;
+}
+
+.btn-block {
+    text-align: left;
+    font-size: 18px;
+    padding: 10px;
+}
+.btn-primary {
+    background-color: #ff8000 !important; /* Orange color with !important to override Bootstrap */
+    border-color: #ff8000 !important; /* Border color if needed */
+}
+
+.btn-primary:hover {
+    background-color: #ff6600 !important; /* Darker orange on hover */
+    border-color: #ff6600 !important; /* Border color on hover if needed */
+}
+
+
+.card-body ul li {
+    padding: 5px 0;
+}
+
+.card-body i {
+    margin-right: 10px;
+}
+
+.skill-bar {
+    height: 5px;
+    background-color: #ff6600 ;
+    margin-top: 10px;
+}
+
 /* About section styles */
 #about {
     background-color: #fff;
@@ -226,102 +268,115 @@ footer {
     /* Add your media query styles here */
 }
 
-/* Timeline styles */
-.timeline {
-    position: relative;
+/* General Timeline Styles */
+.timeline-section {
+    padding: 60px 0;
+    background-color: #f9f9f9;
 }
 
-/* Timeline vertical line */
+.timeline {
+    position: relative;
+    padding: 20px 0;
+}
+
 .timeline:before {
     content: "";
     position: absolute;
     left: 50%;
     top: 0;
-    transform: translateX(-50%);
     width: 4px;
     height: 100%;
-    background-color: #ff8000; /* Line color */
+    background-color: #ff8000;
+    transform: translateX(-50%);
 }
 
-/* Timeline section container */
-.timeline-section {
-    background-color: #f8f8f8; /* Background color of each timeline section */
-    padding: 50px 0;
-}
-
-/* Each timeline item */
 .timeline-item {
     position: relative;
-    padding-left: 20px;
-    margin-bottom: 40px;
+    padding: 20px 20px 20px 80px;
+    margin-bottom: 30px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
 }
 
-/* Content within each timeline item */
+.timeline-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
 .timeline-item-content {
-    width: 100%;
     position: relative;
-    background-color: #fff; /* Set the background color you want */
-    padding: 20px;
-    border-radius: 5px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    
-    
 }
 
-/* Title within timeline item */
 .timeline-item-content h4 {
     margin-top: 0;
+    color: #ff8000;
+    font-size: 1.25rem;
 }
 
-/* Subtitle within timeline item */
 .timeline-item-subtitle {
-    font-size: 16px;
-    margin-top: 5px;
-}
-
-/* Date within timeline item */
-.timeline-item-date {
-    font-size: 14px;
+    font-size: 1rem;
     color: #666;
-    margin-top: 5px;
 }
 
-/* Dot before each timeline item */
+.timeline-item-date {
+    font-size: 0.875rem;
+    color: #999;
+}
+
+.timeline-item-description {
+    margin-top: 15px;
+    font-size: 1rem;
+    color: #333;
+    display: none; /* Hidden by default */
+}
+
+.company-logo {
+    width: 120px;
+    height: auto;
+    margin-top: 10px;
+    border-radius: 4px;
+}
+
+/* Button Styles */
+.toggle-description {
+    background-color: #ff8000;
+    border: none;
+    color: #fff;
+    padding: 10px 20px;
+    font-size: 0.875rem;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+}
+
+.toggle-description:hover {
+    background-color: #e66e00;
+}
+
 .timeline-item::before {
     content: "";
     position: absolute;
-    left: -7px; /* Adjust the position of the dot */
-    top: 5px;
+    left: -10px;
     width: 20px;
     height: 20px;
-    background: #ff8000; /* Dot color */
+    background-color: #ff8000;
     border-radius: 50%;
     z-index: 1;
 }
 
-/* Description text within timeline item */
-.timeline-item-description {
-    display: none; /* Hide the description by default */
-    margin-top: 10px;
-    font-size: 16px;
-}
-
-/* Toggle button to show/hide description */
-.toggle-description {
-    margin-top: 10px;
-}
-
-
-/* Adjust placement of the timeline items */
-@media (min-width: 768px) {
+/* Responsive Design */
+@media (max-width: 768px) {
     .timeline-item {
-        padding-left: 40px;
+        padding: 20px 20px 20px 40px;
     }
 
-    .timeline-item::before {
-        left: -7px;
+    .timeline:before {
+        left: 20px;
     }
 }
+
 
 
 .skill-bar-container {
