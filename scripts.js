@@ -1,42 +1,41 @@
 document.addEventListener("DOMContentLoaded", async function () {
-    try {
-      const response = await fetch("repos.json");
-      const data = await response.json();
-      const projectList = document.getElementById("project-list");
-  
-      data.forEach((repo) => {
-        const projectCard = document.createElement("div");
-        projectCard.classList.add("col-md-4", "project-card");
-  
-        projectCard.innerHTML = `
-          <h3>${repo.name}</h3>
-          <button class="btn btn-primary toggle-description">Toggle Description</button>
-          <div class="markdown-content">${marked.parse(repo.readme || "No README content available.")}</div>
-          <a href="${repo.html_url}" target="_blank">View on GitHub</a>
-        `;
-  
-        projectList.appendChild(projectCard);
-  
-        const toggleButton = projectCard.querySelector(".toggle-description");
-        const description = projectCard.querySelector(".markdown-content");
-  
-        // Hide the description by default
-        description.style.display = "none";
-  
-        // Toggle the description visibility on button click
-        toggleButton.addEventListener("click", function () {
-          if (description.style.display === "none") {
-            description.style.display = "block";
-          } else {
-            description.style.display = "none";
-          }
-        });
+  try {
+    const response = await fetch("repos.json");
+    const data = await response.json();
+    const projectList = document.getElementById("project-list");
+
+    data.forEach((repo) => {
+      const projectCard = document.createElement("div");
+      projectCard.classList.add("col-md-4", "project-card");
+
+      projectCard.innerHTML = `
+        <h3>${repo.name}</h3>
+        <button class="btn btn-primary toggle-description">Toggle Description</button>
+        <p class="timeline-item-description">${repo.readme || "No README content available."}</p>
+        <a href="${repo.html_url}" target="_blank">View on GitHub</a>
+      `;
+
+      projectList.appendChild(projectCard);
+
+      const toggleButton = projectCard.querySelector(".toggle-description");
+      const description = projectCard.querySelector(".timeline-item-description");
+
+      // Hide the description by default
+      description.style.display = "none";
+
+      // Toggle the description visibility on button click
+      toggleButton.addEventListener("click", function () {
+        if (description.style.display === "none") {
+          description.style.display = "block";
+        } else {
+          description.style.display = "none";
+        }
       });
-    } catch (error) {
-      console.error("Error:", error);
-    }
-  });
-  
+    });
+  } catch (error) {
+    console.error("Error:", error);
+  }
+});
 
 // Populate work experience timeline
 const workExperiences = [
