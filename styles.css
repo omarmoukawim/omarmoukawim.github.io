@@ -484,13 +484,7 @@ footer {
 
 /* CSS for Markdown content */
 .markdown-content {
-    /* Remove default button styles and other unwanted styles */
-    .btn {
-        all: unset; /* Remove all button styles */
-        cursor: text; /* Change cursor to text selection */
-    }
-    
-    /* Additional styling to ensure Markdown content is displayed properly */
+    /* General styling */
     p, ul, ol {
         margin: 0;
         padding: 0;
@@ -500,14 +494,27 @@ footer {
         max-width: 100%; /* Ensure images do not overflow */
         height: auto;
     }
-    
+
     /* Style for links to make them visible but not as buttons */
     a {
-        color: #000000; /* Use your theme color */
+        color: #007bff; /* Use your theme color */
         text-decoration: none;
     }
     
     a:hover {
         text-decoration: underline;
     }
+
+    /* Specific removal of button styles */
+    .markdown-content .btn,
+    .markdown-content button {
+        all: unset; /* Remove all button styles */
+        cursor: text; /* Change cursor to text selection */
+    }
+    
+    /* Ensure that there are no default button styles applied */
+    .markdown-content button {
+        display: inline; /* Ensure buttons are inline if they appear */
+    }
 }
+
