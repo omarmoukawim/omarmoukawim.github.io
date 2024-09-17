@@ -90,143 +90,179 @@
         <div class="container">
             <h2 class="section-header text-center mb-5">Skills</h2>
     
-            <!-- Coding Skills -->
-            <div class="skill-section">
-                <button class="btn btn-primary btn-block text-left" type="button" data-toggle="collapse" data-target="#codingSkills" aria-expanded="false" aria-controls="codingSkills">
-                    <i class="fas fa-code"></i> Coding Skills
-                </button>
-                <div class="collapse" id="codingSkills">
-                    <div class="card card-body">
-                        <ul class="list-unstyled">
-                            <li><i class="fas fa-code"></i> Python (Data Analysis, Machine Learning, Web Development)</li>
-                            <li><i class="fas fa-code"></i> Java (Object-Oriented Programming)</li>
-                            <li><i class="fas fa-microchip"></i> C (Embedded Systems, Low-level Programming)</li>
-                            <li><i class="fas fa-calculator"></i> MATLAB & Simulink (Signal Processing, Control Systems)</li>
-                            <li><i class="fas fa-microchip"></i> Verilog/VHDL (Digital Circuit Design, FPGA Programming)</li>
-                            <li><i class="fas fa-car"></i> CANoe/CAPL (Automotive Network Analysis, ECU Simulation)</li>
-                            <li><i class="fas fa-laptop-code"></i> Web Development (HTML5, CSS3, JavaScript)</li>
-                            <li><i class="fas fa-database"></i> SQL (Database Design, Query Optimization)</li>
-                            <li><i class="fas fa-code-branch"></i> Version Control (Git, GitHub)</li>
-                        </ul>
+            <div class="row">
+                <!-- Coding Skills -->
+                <div class="col-md-6 mb-4">
+                    <div class="card skill-section">
+                        <button class="custom-skill-btn" type="button" data-toggle="collapse" data-target="#codingSkills" aria-expanded="false" aria-controls="codingSkills">
+                            <i class="fas fa-laptop-code"></i> Coding Skills
+                        </button>
+                        <div class="collapse" id="codingSkills">
+                            <div class="card-body">
+                                <ul class="list-unstyled">
+                                    <li><i class="fas fa-terminal"></i> Python (Data Analysis, Machine Learning, Web Development)</li>
+                                    <li><i class="fas fa-coffee"></i> Java (Object-Oriented Programming)</li>
+                                    <li><i class="fas fa-memory"></i> C (Embedded Systems, Low-level Programming)</li>
+                                    <li><i class="fas fa-chart-line"></i> MATLAB & Simulink (Signal Processing, Control Systems)</li>
+                                    <li><i class="fas fa-digital-tachograph"></i> Verilog/VHDL (Digital Circuit Design, FPGA Programming)</li>
+                                    <li><i class="fas fa-car-side"></i> CANoe/CAPL (Automotive Network Analysis, ECU Simulation)</li>
+                                    <li><i class="fas fa-globe"></i> Web Development (HTML5, CSS3, JavaScript)</li>
+                                    <li><i class="fas fa-database"></i> SQL (Database Design, Query Optimization)</li>
+                                    <li><i class="fas fa-code-branch"></i> Version Control (Git, GitHub)</li>
+                                </ul>
+                            </div>
+                        </div>
                     </div>
                 </div>
-            </div>
     
-            <!-- Cybersecurity Skills -->
-            <div class="skill-section">
-                <button class="btn btn-primary btn-block text-left" type="button" data-toggle="collapse" data-target="#cyberSkills" aria-expanded="false" aria-controls="cyberSkills">
-                    <i class="fas fa-shield-alt"></i> Cybersecurity Skills
-                </button>
-                <div class="collapse" id="cyberSkills">
-                    <div class="card card-body">
-                        <ul class="list-unstyled">
-                            <li><i class="fas fa-user-secret"></i> Penetration Testing & Ethical Hacking</li>
-                            <li><i class="fas fa-lock"></i> Red Team Operations & Offensive Security</li>
-                            <li><i class="fas fa-file-code"></i> Secure Code Review & SAST/DAST Implementation</li>
-                            <li><i class="fas fa-bug"></i> Vulnerability Assessment & Management</li>
-                            <li><i class="fas fa-terminal"></i> Network Security (Firewalls, IDS/IPS, VPNs)</li>
-                            <li><i class="fas fa-database"></i> Web Application Security </li>
-                            <li><i class="fas fa-terminal"></i> Cryptography & Encryption Protocols</li>
-                            <li><i class="fas fa-database"></i> Security Information and Event Management (SIEM)</li>
-                        </ul>
+                <!-- Cybersecurity Skills -->
+                <div class="col-md-6 mb-4">
+                    <div class="card skill-section">
+                        <button class="custom-skill-btn" type="button" data-toggle="collapse" data-target="#cyberSkills" aria-expanded="false" aria-controls="cyberSkills">
+                            <i class="fas fa-user-shield"></i> Cybersecurity Skills
+                        </button>
+                        <div class="collapse" id="cyberSkills">
+                            <div class="card-body">
+                                <ul class="list-unstyled">
+                                    <li><i class="fas fa-bug"></i> Penetration Testing & Ethical Hacking</li>
+                                    <li><i class="fas fa-fighter-jet"></i> Red Team Operations & Offensive Security</li>
+                                    <li><i class="fas fa-file-alt"></i> Secure Code Review & SAST/DAST Implementation</li>
+                                    <li><i class="fas fa-search"></i> Vulnerability Assessment & Management</li>
+                                    <li><i class="fas fa-network-wired"></i> Network Security (Firewalls, IDS/IPS, VPNs)</li>
+                                    <li><i class="fas fa-shield-alt"></i> Web Application Security</li>
+                                    <li><i class="fas fa-key"></i> Cryptography & Encryption Protocols</li>
+                                    <li><i class="fas fa-cogs"></i> SIEM (Security Information and Event Management)</li>
+                                </ul>
+                            </div>
+                        </div>
                     </div>
                 </div>
-            </div>
     
-            <!-- Spoken Languages -->
-            <div class="skill-section">
-                <button class="btn btn-primary btn-block text-left" type="button" data-toggle="collapse" data-target="#languages" aria-expanded="false" aria-controls="languages">
-                    <i class="fas fa-language"></i> Spoken Languages
-                </button>
-                <div class="collapse" id="languages">
-                    <div class="card card-body">
-                        <ul class="list-unstyled">
-                            <li><i class="fas fa-comment"></i> English (C1 - Advanced: Fluent in professional and academic contexts)</li>
-                            <li><i class="fas fa-comment"></i> Italian (Native: Mastery in all aspects of the language)</li>
-                            <li><i class="fas fa-comment"></i> French (B1 - Intermediate: Can handle most travel and work situations)</li>
-                            <li><i class="fas fa-comment"></i> Arabic (A2 - Elementary: Basic communication in simple situations)</li>
-                        </ul>
+                <!-- Spoken Languages -->
+                <div class="col-md-6 mb-4">
+                    <div class="card skill-section">
+                        <button class="custom-skill-btn" type="button" data-toggle="collapse" data-target="#languages" aria-expanded="false" aria-controls="languages">
+                            <i class="fas fa-comments"></i> Spoken Languages
+                        </button>
+                        <div class="collapse" id="languages">
+                            <div class="card-body">
+                                <ul class="list-unstyled">
+                                    <li><i class="fas fa-comment-dots"></i> English (C1 - Advanced: Fluent in professional and academic contexts)</li>
+                                    <li><i class="fas fa-comment"></i> Italian (Native: Mastery in all aspects of the language)</li>
+                                    <li><i class="fas fa-comment-alt"></i> French (B1 - Intermediate: Can handle most travel and work situations)</li>
+                                    <li><i class="fas fa-globe"></i> Arabic (A2 - Elementary: Basic communication in simple situations)</li>
+                                </ul>
+                            </div>
+                        </div>
                     </div>
                 </div>
-            </div>
     
-            <!-- Soft Skills -->
-            <div class="skill-section">
-                <button class="btn btn-primary btn-block text-left" type="button" data-toggle="collapse" data-target="#softSkills" aria-expanded="false" aria-controls="softSkills">
-                    <i class="fas fa-users"></i> Soft Skills
-                </button>
-                <div class="collapse" id="softSkills">
-                    <div class="card card-body">
-                        <ul class="list-unstyled">
-                            <li><i class="fas fa-comments"></i> Effective Communication (Verbal, Written, Presentation Skills)</li>
-                            <li><i class="fas fa-lightbulb"></i> Critical Thinking & Problem Solving</li>
-                            <li><i class="fas fa-users"></i> Collaborative Teamwork & Leadership</li>
-                            <li><i class="fas fa-tasks"></i> Project Management (Agile, Scrum)</li>
-                            <li><i class="fas fa-sync-alt"></i> Adaptability & Continuous Learning</li>
-                            <li><i class="fas fa-clock"></i> Time Management & Prioritization</li>
-                            <li><i class="fas fa-hand-rock"></i> Conflict Resolution & Negotiation</li>
-                            <li><i class="fas fa-chart-line"></i> Analytical Thinking & Data Interpretation</li>
-                        </ul>
+                <!-- Soft Skills -->
+                <div class="col-md-6 mb-4">
+                    <div class="card skill-section">
+                        <button class="custom-skill-btn" type="button" data-toggle="collapse" data-target="#softSkills" aria-expanded="false" aria-controls="softSkills">
+                            <i class="fas fa-brain"></i> Soft Skills
+                        </button>
+                        <div class="collapse" id="softSkills">
+                            <div class="card-body">
+                                <ul class="list-unstyled">
+                                    <li><i class="fas fa-handshake"></i> Effective Communication (Verbal, Written, Presentation Skills)</li>
+                                    <li><i class="fas fa-lightbulb"></i> Critical Thinking & Problem Solving</li>
+                                    <li><i class="fas fa-users-cog"></i> Collaborative Teamwork & Leadership</li>
+                                    <li><i class="fas fa-calendar-check"></i> Project Management (Agile, Scrum)</li>
+                                    <li><i class="fas fa-arrows-alt"></i> Adaptability & Continuous Learning</li>
+                                    <li><i class="fas fa-stopwatch"></i> Time Management & Prioritization</li>
+                                    <li><i class="fas fa-hand-peace"></i> Conflict Resolution & Negotiation</li>
+                                    <li><i class="fas fa-chart-pie"></i> Analytical Thinking & Data Interpretation</li>
+                                </ul>
+                            </div>
+                        </div>
                     </div>
                 </div>
-            </div>
     
-            <!-- Version Control -->
-            <div class="skill-section">
-                <button class="btn btn-primary btn-block text-left" type="button" data-toggle="collapse" data-target="#versionControl" aria-expanded="false" aria-controls="versionControl">
-                    <i class="fas fa-code-branch"></i> Version Control & CI/CD
-                </button>
-                <div class="collapse" id="versionControl">
-                    <div class="card card-body">
-                        <ul class="list-unstyled">
-                            <li><i class="fab fa-git"></i> Git (Branching Strategies, Merge Conflict Resolution)</li>
-                            <li><i class="fab fa-github"></i> GitHub (Pull Requests, Actions, Project Management)</li>
-                            <li><i class="fas fa-code-branch"></i> Gerrit (Code Review, Access Control)</li>
-                            <li><i class="fas fa-server"></i> Jenkins (Pipeline Creation, Build Automation)</li>
-                            <li><i class="fas fa-code-branch"></i> GitLab CI/CD (Pipeline Configuration, Container Registry)</li>
-                            <li><i class="fas fa-sync-alt"></i> Continuous Integration & Continuous Deployment Practices</li>
-                        </ul>
+                <!-- Version Control -->
+                <div class="col-md-6 mb-4">
+                    <div class="card skill-section">
+                        <button class="custom-skill-btn" type="button" data-toggle="collapse" data-target="#versionControl" aria-expanded="false" aria-controls="versionControl">
+                            <i class="fas fa-code-branch"></i> Version Control & CI/CD
+                        </button>
+                        <div class="collapse" id="versionControl">
+                            <div class="card-body">
+                                <ul class="list-unstyled">
+                                    <li><i class="fab fa-git-alt"></i> Git (Branching Strategies, Merge Conflict Resolution)</li>
+                                    <li><i class="fab fa-github-square"></i> GitHub (Pull Requests, Actions, Project Management)</li>
+                                    <li><i class="fas fa-cogs"></i> Gerrit (Code Review, Access Control)</li>
+                                    <li><i class="fas fa-tachometer-alt"></i> Jenkins (Pipeline Creation, Build Automation)</li>
+                                    <li><i class="fas fa-recycle"></i> Continuous Integration & Continuous Deployment Practices</li>
+                                </ul>
+                            </div>
+                        </div>
                     </div>
                 </div>
-            </div>
     
-            <!-- Database Management -->
-            <div class="skill-section">
-                <button class="btn btn-primary btn-block text-left" type="button" data-toggle="collapse" data-target="#databaseSkills" aria-expanded="false" aria-controls="databaseSkills">
-                    <i class="fas fa-database"></i> Database Management
-                </button>
-                <div class="collapse" id="databaseSkills">
-                    <div class="card card-body">
-                        <ul class="list-unstyled">
-                            <li><i class="fas fa-database"></i> SQL (Complex Queries, Stored Procedures, Triggers)</li>
-                            <li><i class="fas fa-server"></i> MariaDB (Administration, Performance Tuning)</li>
-                            <li><i class="fas fa-database"></i> Database Design (Normalization, ER Diagrams)</li>
-                            <li><i class="fas fa-database"></i> NoSQL Databases (MongoDB, Cassandra)</li>
-                            <li><i class="fas fa-shield-alt"></i> Database Security (Access Control, Encryption)</li>
-                        </ul>
+                <!-- Database Management -->
+                <div class="col-md-6 mb-4">
+                    <div class="card skill-section">
+                        <button class="custom-skill-btn" type="button" data-toggle="collapse" data-target="#databaseSkills" aria-expanded="false" aria-controls="databaseSkills">
+                            <i class="fas fa-database"></i> Database Management
+                        </button>
+                        <div class="collapse" id="databaseSkills">
+                            <div class="card-body">
+                                <ul class="list-unstyled">
+                                    <li><i class="fas fa-database"></i> SQL (Complex Queries, Stored Procedures, Triggers)</li>
+                                    <li><i class="fas fa-server"></i> MariaDB (Administration, Performance Tuning)</li>
+                                    <li><i class="fas fa-draw-polygon"></i> Database Design (Normalization, ER Diagrams)</li>
+                                    <li><i class="fas fa-code"></i> NoSQL Databases (MongoDB, Cassandra)</li>
+                                    <li><i class="fas fa-user-shield"></i> Database Security (Access Control, Encryption)</li>
+                                </ul>
+                            </div>
+                        </div>
                     </div>
                 </div>
-            </div>
     
-            <!-- Agile Project Management -->
-            <div class="skill-section">
-                <button class="btn btn-primary btn-block text-left" type="button" data-toggle="collapse" data-target="#agileSkills" aria-expanded="false" aria-controls="agileSkills">
-                    <i class="fas fa-project-diagram"></i> Agile Project Management
-                </button>
-                <div class="collapse" id="agileSkills">
-                    <div class="card card-body">
-                        <ul class="list-unstyled">
-                            <li><i class="fab fa-jira"></i> Jira (Workflow Customization, Reporting, Integration)</li>
-                            <li><i class="fas fa-book"></i> Confluence (Documentation, Knowledge Management)</li>
-                            <li><i class="fas fa-sitemap"></i> Scrum (Sprint Planning, Daily Stand-ups, Retrospectives)</li>
-                            <li><i class="fas fa-users"></i> Agile Team Facilitation & Coaching</li>
-                            <li><i class="fas fa-chart-bar"></i> Agile Metrics & Performance Tracking</li>
-                        </ul>
+                <!-- Agile Project Management -->
+                <div class="col-md-6 mb-4">
+                    <div class="card skill-section">
+                        <button class="custom-skill-btn" type="button" data-toggle="collapse" data-target="#agileSkills" aria-expanded="false" aria-controls="agileSkills">
+                            <i class="fas fa-tasks"></i> Agile Project Management
+                        </button>
+                        <div class="collapse" id="agileSkills">
+                            <div class="card-body">
+                                <ul class="list-unstyled">
+                                    <li><i class="fab fa-jira"></i> Jira (Workflow Customization, Reporting, Integration)</li>
+                                    <li><i class="fas fa-book-open"></i> Confluence (Documentation Management, Integration with Jira)</li>
+                                    <li><i class="fas fa-balance-scale"></i> Agile Methodologies (Scrum)</li>
+                                    <li><i class="fas fa-stopwatch"></i> Sprint Planning, Retrospectives & Backlog Grooming</li>
+                                </ul>
+                            </div>
+                        </div>
                     </div>
                 </div>
-            </div>
+
+                <!-- AI and Machine Learning -->
+                <div class="col-md-6 mb-4">
+                    <div class="card skill-section">
+                        <button class="custom-skill-btn" type="button" data-toggle="collapse" data-target="#aiMLSkills" aria-expanded="false" aria-controls="aiMLSkills">
+                            <i class="fas fa-robot"></i> AI and Machine Learning
+                        </button>
+                        <div class="collapse" id="aiMLSkills">
+                            <div class="card-body">
+                                <ul class="list-unstyled">
+                                    <li><i class="fas fa-brain"></i> Large Language Models (LLMs) - Conversational AI & Natural Language Processing (NLP)</li>
+                                    <li><i class="fas fa-shield-virus"></i> Red Teaming on AI Systems - Multi-Agent Adversarial Simulations</li>
+                                    <li><i class="fas fa-chalkboard-teacher"></i> Supervised, Unsupervised, and Reinforcement Learning Algorithms</li>
+                                    <li><i class="fas fa-camera-retro"></i> Neural Networks for Image Recognition and Speech Analysis</li>
+                                    <li><i class="fas fa-solid fa-chart-area"></i> Predictive Analytics & Data-driven Model Training</li>
+                                    <li><i class="fas fa-users-cog"></i> AI Ethics & Bias Mitigation in Machine Learning Models</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
     
+            </div>
         </div>
+
     </section>
     
 

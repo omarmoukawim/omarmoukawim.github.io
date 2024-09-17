@@ -194,23 +194,51 @@ p {
     padding: 10px;
 }
 .btn-primary {
-    background-color: #ff8000 !important; /* Orange color with !important to override Bootstrap */
-    border-color: #ff8000 !important; /* Border color if needed */
+    background-color: #ff8000 ; /* Orange color with !important to override Bootstrap */
+    border-color: #ff8000 ; /* Border color if needed */
 }
 
 .btn-primary:hover {
-    background-color: #ff6600 !important; /* Darker orange on hover */
-    border-color: #ff6600 !important; /* Border color on hover if needed */
+    background-color: #ff6600 ; /* Darker orange on hover */
+    border-color: #ff6600 ; /* Border color on hover if needed */
 }
 
+
+/* Custom button for skills */
+.custom-skill-btn {
+    background-color: #FF8000;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    width: 100%;
+    text-align: left;
+    transition: background-color 0.3s ease;
+}
+
+.custom-skill-btn:hover {
+    background-color: #e67300;
+}
+
+/* Card hover effect */
+.card.skill-section {
+    transition: transform 0.2s;
+    border-radius: 10px;
+}
+
+.card.skill-section:hover {
+    transform: translateY(-10px);
+}
+
+.card-body ul {
+    padding-left: 20px;
+}
 
 .card-body ul li {
-    padding: 5px 0;
+    margin-bottom: 10px;
 }
 
-.card-body i {
-    margin-right: 10px;
-}
 
 .skill-bar {
     height: 5px;
