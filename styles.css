@@ -465,6 +465,7 @@ footer {
     margin-top: -75px;
 }
 
+
 #back-to-top-button {
     display: none;
     position: fixed;
@@ -479,4 +480,34 @@ footer {
     height: 40px;
     font-size: 20px;
     cursor: pointer;
+}
+
+/* CSS for Markdown content */
+.markdown-content {
+    /* Remove default button styles and other unwanted styles */
+    .btn {
+        all: unset; /* Remove all button styles */
+        cursor: text; /* Change cursor to text selection */
+    }
+    
+    /* Additional styling to ensure Markdown content is displayed properly */
+    p, ul, ol {
+        margin: 0;
+        padding: 0;
+    }
+    
+    img {
+        max-width: 100%; /* Ensure images do not overflow */
+        height: auto;
+    }
+    
+    /* Style for links to make them visible but not as buttons */
+    a {
+        color: #000000; /* Use your theme color */
+        text-decoration: none;
+    }
+    
+    a:hover {
+        text-decoration: underline;
+    }
 }

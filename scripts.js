@@ -1,31 +1,24 @@
-
-
 document.addEventListener("DOMContentLoaded", async function () {
     try {
-      // Fetch the JSON file
       const response = await fetch("repos.json");
       const data = await response.json();
       const projectList = document.getElementById("project-list");
   
       data.forEach((repo) => {
-        // Create a new card for each project
         const projectCard = document.createElement("div");
         projectCard.classList.add("col-md-4", "project-card");
   
-        // Create the card's HTML content
         projectCard.innerHTML = `
           <h3>${repo.name}</h3>
           <button class="btn btn-primary toggle-description">Toggle Description</button>
-          <div class="timeline-item-description">${marked.parse(repo.readme || "No README content available.")}</div>
+          <div class="markdown-content">${marked.parse(repo.readme || "No README content available.")}</div>
           <a href="${repo.html_url}" target="_blank">View on GitHub</a>
         `;
   
-        // Append the card to the project list
         projectList.appendChild(projectCard);
   
-        // Set up the toggle functionality
         const toggleButton = projectCard.querySelector(".toggle-description");
-        const description = projectCard.querySelector(".timeline-item-description");
+        const description = projectCard.querySelector(".markdown-content");
   
         // Hide the description by default
         description.style.display = "none";
