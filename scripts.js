@@ -45,7 +45,8 @@ const workExperiences = [
         location: "Chieti, Italy",
         position: "CYBERSECURITY ENGINEER - RED TEAM | FULL-TIME",
         company: "LEONARDO",
-        description: "Consistently conducting detailed Vulnerability Assessments on client systems, our team employs a comprehensive approach that includes implementing DAST, SAST, and WAPTs methodologies. Through these efforts, we fortify our clients' systems against the ever-evolving landscape of cyber threats. Furthermore, our expertise extends to executing thorough WAPT initiatives, where we try to unveil previously undetected vulnerabilities, ultimately enhancing the overall security posture of our clients' projects.",
+        description: "Actively involved in AI Red Teaming, focusing on enhancing security for AI-related systems. My role also includes conducting Vulnerability Assessments (VA), Dynamic Application Security Testing (DAST), Static Application Security Testing (SAST), and Web Application Penetration Testing (WAPT) for a variety of clients.\
+        In addition, I work closely with international teams on high-profile projects, contributing to both European and global programs.",
         logo:"leonardo"
     },
     {
