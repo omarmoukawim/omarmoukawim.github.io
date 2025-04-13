@@ -1,5 +1,11 @@
 [
   {
+    "name": "DC-motor-control",
+    "description": null,
+    "html_url": "https://github.com/omarmoukawim/DC-motor-control",
+    "readme": "In this project the model of a DC motor has been analyzed to control its velocity. All has been implemented in Simulink.The Simulink model is simulated to analyze the performance of the velocity control system. Various parameters such as rise time, settling time, overshoot, and steady-state error are calculated to assess the controller's effectiveness. The control of the velocity has been succesfully designed.\n\nDURATION: 3 weeks\n"
+  },
+  {
     "name": "omarmoukawim.github.io",
     "description": null,
     "html_url": "https://github.com/omarmoukawim/omarmoukawim.github.io",
@@ -70,12 +76,6 @@
     "description": null,
     "html_url": "https://github.com/omarmoukawim/BLE-sniffing",
     "readme": "This is my final project fot the Embedded systems course of the first semester of my first year of master course in Control systems engineering at\nUniversità degli studi dell'aquila.\nThe aim of this project was to analyze Bluetooth Low Energy (BLE) packets sent from different transmitting devices in different environments to analyze packet losses and RSSIs.\n\nDURATION: 3 months\n"
-  },
-  {
-    "name": "DC-motor-control",
-    "description": null,
-    "html_url": "https://github.com/omarmoukawim/DC-motor-control",
-    "readme": "In this project the model of a DC motor has been analyzed to control its velocity. All has been implemented in Simulink.The Simulink model is simulated to analyze the performance of the velocity control system. Various parameters such as rise time, settling time, overshoot, and steady-state error are calculated to assess the controller's effectiveness. The control of the velocity has been succesfully designed.\n\nDURATION: 3 weeks\n"
   },
   {
     "name": "Jparcheggio",
