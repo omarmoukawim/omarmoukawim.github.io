@@ -1,15 +1,15 @@
 [
   {
-    "name": "DC-motor-control",
-    "description": null,
-    "html_url": "https://github.com/omarmoukawim/DC-motor-control",
-    "readme": "In this project the model of a DC motor has been analyzed to control its velocity. All has been implemented in Simulink.The Simulink model is simulated to analyze the performance of the velocity control system. Various parameters such as rise time, settling time, overshoot, and steady-state error are calculated to assess the controller's effectiveness. The control of the velocity has been succesfully designed.\n\nDURATION: 3 weeks\n"
-  },
-  {
     "name": "omarmoukawim.github.io",
     "description": null,
     "html_url": "https://github.com/omarmoukawim/omarmoukawim.github.io",
     "readme": "No README available."
+  },
+  {
+    "name": "DC-motor-control",
+    "description": null,
+    "html_url": "https://github.com/omarmoukawim/DC-motor-control",
+    "readme": "In this project the model of a DC motor has been analyzed to control its velocity. All has been implemented in Simulink.The Simulink model is simulated to analyze the performance of the velocity control system. Various parameters such as rise time, settling time, overshoot, and steady-state error are calculated to assess the controller's effectiveness. The control of the velocity has been succesfully designed.\n\nDURATION: 3 weeks\n"
   },
   {
     "name": "MultiAgent-RedTeam-Toolkit",
