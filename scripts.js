@@ -4,12 +4,12 @@ document.addEventListener("DOMContentLoaded", async function () {
     const workExperiences = [
         {
             date: "Jun 2025 – Present",
-            role: "Cybersecurity Engineer - AI Platforms",
+            role: "Cybersecurity Engineer",
             company: "Leonardo SpA",
             location: "Chieti, Italy",
             description: `
                 <ul>
-                    <li>Coordinating technical development for the Leonardo GCC Platform.</li>
+                    <li>Coordinating technical development for the new cyber total security platform.</li>
                     <li>Defining technical requirements for an <strong>AI-driven, multi-agent platform</strong> to orchestrate MSSP services.</li>
                     <li>Aligning development lifecycles with project roadmaps and business requirements.</li>
                     <li>Supporting client-facing technical demonstrations and platform integration.</li>
