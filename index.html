@@ -3,403 +3,204 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Omar Moukawim's Portfolio 👋</title>
+    <meta name="description" content="Omar Moukawim - Cybersecurity Engineer Portfolio">
+    <title>Omar Moukawim | Cybersecurity Engineer</title>
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    
     <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
-    
-
 </head>
-<body>
-    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+<body data-bs-spy="scroll" data-bs-target="#main-nav" data-bs-offset="120">
+
+    <nav id="main-nav" class="navbar navbar-expand-lg fixed-top">
         <div class="container">
-          <a class="navbar-brand" href="#">Omar's Portfolio <span class="wave">👋</span></a>
-          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav ml-auto">
-              <li class="nav-item">
-                <a class="nav-link" href="#header">Home</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#projects">Projects</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#skills">Skills</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#control-passion">Why control systems?</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#about-me">About me</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#contact">Contact</a>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </nav>
-      
-
-
-    <section id="header" class="header">
-        <div class="container text-center">
-            <img src="foto_sito.jpg" alt="Your Name" class="rounded-circle profile-picture">
-            <h1 class="display-4">Omar Moukawim</h1>
-            <p class="lead">Cybersecurity & Control Systems Engineer</p>
-            <div class="social-icons">
-                <a href="https://github.com/omarmoukawim" target="_blank" class="social-icon"><i class="fab fa-github"></i></a>
-                <a href="https://www.linkedin.com/in/omarmoukawim/" target="_blank" class="social-icon"><i class="fab fa-linkedin"></i></a>
-            </div>
-        </div>
-    </section>
-   <section id="work-experience" class="timeline-section">
-    <div class="container">
-        <h2 class="section-header text-center mb-5">Work Experience</h2>
-        <div class="timeline">
-            <!-- Work experiences will be added here by JavaScript -->
-        </div>
-    </div>
-</section>
-
-
-<section id="education" class="timeline-section">
-    <div class="container">
-        <h2 class="section-header text-center mb-5">Education</h2>
-        <div class="timeline">
-            <!-- Education Items -->
-
-            <!-- Add more education items -->
-        </div>
-    </div>
-</section>
-
-
-    <section id="projects" class="projects">
-        <div class="container">
-            <h2 class="section-header text-center mb-5">Projects</h2>
-            <div class="row project-list" id="project-list">
-                <!-- Dynamic project cards will be added here by JavaScript -->
-            </div>
-        </div>
-    </section>
-
-    
-    <section id="skills" class="skills">
-        <div class="container">
-            <h2 class="section-header text-center mb-5">Skills</h2>
-    
-            <div class="row">
-                <!-- Coding Skills -->
-                <div class="col-md-6 mb-4">
-                    <div class="card skill-section">
-                        <button class="custom-skill-btn" type="button" data-toggle="collapse" data-target="#codingSkills" aria-expanded="false" aria-controls="codingSkills">
-                            <i class="fas fa-laptop-code"></i> Coding Skills
-                        </button>
-                        <div class="collapse" id="codingSkills">
-                            <div class="card-body">
-                                <ul class="list-unstyled">
-                                    <li><i class="fas fa-terminal"></i> Python (Data Analysis, Machine Learning, Web Development)</li>
-                                    <li><i class="fas fa-coffee"></i> Java (Object-Oriented Programming)</li>
-                                    <li><i class="fas fa-memory"></i> C (Embedded Systems, Low-level Programming)</li>
-                                    <li><i class="fas fa-chart-line"></i> MATLAB & Simulink (Signal Processing, Control Systems)</li>
-                                    <li><i class="fas fa-digital-tachograph"></i> Verilog/VHDL (Digital Circuit Design, FPGA Programming)</li>
-                                    <li><i class="fas fa-car-side"></i> CANoe/CAPL (Automotive Network Analysis, ECU Simulation)</li>
-                                    <li><i class="fas fa-globe"></i> Web Development (HTML5, CSS3, JavaScript)</li>
-                                    <li><i class="fas fa-database"></i> SQL (Database Design, Query Optimization)</li>
-                                    <li><i class="fas fa-code-branch"></i> Version Control (Git, GitHub)</li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-    
-                <!-- Cybersecurity Skills -->
-                <div class="col-md-6 mb-4">
-                    <div class="card skill-section">
-                        <button class="custom-skill-btn" type="button" data-toggle="collapse" data-target="#cyberSkills" aria-expanded="false" aria-controls="cyberSkills">
-                            <i class="fas fa-user-shield"></i> Cybersecurity Skills
-                        </button>
-                        <div class="collapse" id="cyberSkills">
-                            <div class="card-body">
-                                <ul class="list-unstyled">
-                                    <li><i class="fas fa-bug"></i> Penetration Testing & Ethical Hacking</li>
-                                    <li><i class="fas fa-fighter-jet"></i> Red Team Operations & Offensive Security</li>
-                                    <li><i class="fas fa-file-alt"></i> Secure Code Review & SAST/DAST Implementation</li>
-                                    <li><i class="fas fa-search"></i> Vulnerability Assessment & Management</li>
-                                    <li><i class="fas fa-network-wired"></i> Network Security (Firewalls, IDS/IPS, VPNs)</li>
-                                    <li><i class="fas fa-shield-alt"></i> Web Application Security</li>
-                                    <li><i class="fas fa-key"></i> Cryptography & Encryption Protocols</li>
-                                    <li><i class="fas fa-cogs"></i> SIEM (Security Information and Event Management)</li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-    
-                <!-- Spoken Languages -->
-                <div class="col-md-6 mb-4">
-                    <div class="card skill-section">
-                        <button class="custom-skill-btn" type="button" data-toggle="collapse" data-target="#languages" aria-expanded="false" aria-controls="languages">
-                            <i class="fas fa-comments"></i> Spoken Languages
-                        </button>
-                        <div class="collapse" id="languages">
-                            <div class="card-body">
-                                <ul class="list-unstyled">
-                                    <li><i class="fas fa-comment-dots"></i> English (C1 - Advanced: Fluent in professional and academic contexts)</li>
-                                    <li><i class="fas fa-comment"></i> Italian (Native: Mastery in all aspects of the language)</li>
-                                    <li><i class="fas fa-comment-alt"></i> French (B1 - Intermediate: Can handle most travel and work situations)</li>
-                                    <li><i class="fas fa-globe"></i> Arabic (A2 - Elementary: Basic communication in simple situations)</li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-    
-                <!-- Soft Skills -->
-                <div class="col-md-6 mb-4">
-                    <div class="card skill-section">
-                        <button class="custom-skill-btn" type="button" data-toggle="collapse" data-target="#softSkills" aria-expanded="false" aria-controls="softSkills">
-                            <i class="fas fa-brain"></i> Soft Skills
-                        </button>
-                        <div class="collapse" id="softSkills">
-                            <div class="card-body">
-                                <ul class="list-unstyled">
-                                    <li><i class="fas fa-handshake"></i> Effective Communication (Verbal, Written, Presentation Skills)</li>
-                                    <li><i class="fas fa-lightbulb"></i> Critical Thinking & Problem Solving</li>
-                                    <li><i class="fas fa-users-cog"></i> Collaborative Teamwork & Leadership</li>
-                                    <li><i class="fas fa-calendar-check"></i> Project Management (Agile, Scrum)</li>
-                                    <li><i class="fas fa-arrows-alt"></i> Adaptability & Continuous Learning</li>
-                                    <li><i class="fas fa-stopwatch"></i> Time Management & Prioritization</li>
-                                    <li><i class="fas fa-hand-peace"></i> Conflict Resolution & Negotiation</li>
-                                    <li><i class="fas fa-chart-pie"></i> Analytical Thinking & Data Interpretation</li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-    
-                <!-- Version Control -->
-                <div class="col-md-6 mb-4">
-                    <div class="card skill-section">
-                        <button class="custom-skill-btn" type="button" data-toggle="collapse" data-target="#versionControl" aria-expanded="false" aria-controls="versionControl">
-                            <i class="fas fa-code-branch"></i> Version Control & CI/CD
-                        </button>
-                        <div class="collapse" id="versionControl">
-                            <div class="card-body">
-                                <ul class="list-unstyled">
-                                    <li><i class="fab fa-git-alt"></i> Git (Branching Strategies, Merge Conflict Resolution)</li>
-                                    <li><i class="fab fa-github-square"></i> GitHub (Pull Requests, Actions, Project Management)</li>
-                                    <li><i class="fas fa-cogs"></i> Gerrit (Code Review, Access Control)</li>
-                                    <li><i class="fas fa-tachometer-alt"></i> Jenkins (Pipeline Creation, Build Automation)</li>
-                                    <li><i class="fas fa-recycle"></i> Continuous Integration & Continuous Deployment Practices</li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-    
-                <!-- Database Management -->
-                <div class="col-md-6 mb-4">
-                    <div class="card skill-section">
-                        <button class="custom-skill-btn" type="button" data-toggle="collapse" data-target="#databaseSkills" aria-expanded="false" aria-controls="databaseSkills">
-                            <i class="fas fa-database"></i> Database Management
-                        </button>
-                        <div class="collapse" id="databaseSkills">
-                            <div class="card-body">
-                                <ul class="list-unstyled">
-                                    <li><i class="fas fa-database"></i> SQL (Complex Queries, Stored Procedures, Triggers)</li>
-                                    <li><i class="fas fa-server"></i> MariaDB (Administration, Performance Tuning)</li>
-                                    <li><i class="fas fa-draw-polygon"></i> Database Design (Normalization, ER Diagrams)</li>
-                                    <li><i class="fas fa-code"></i> NoSQL Databases (MongoDB, Cassandra)</li>
-                                    <li><i class="fas fa-user-shield"></i> Database Security (Access Control, Encryption)</li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-    
-                <!-- Agile Project Management -->
-                <div class="col-md-6 mb-4">
-                    <div class="card skill-section">
-                        <button class="custom-skill-btn" type="button" data-toggle="collapse" data-target="#agileSkills" aria-expanded="false" aria-controls="agileSkills">
-                            <i class="fas fa-tasks"></i> Agile Project Management
-                        </button>
-                        <div class="collapse" id="agileSkills">
-                            <div class="card-body">
-                                <ul class="list-unstyled">
-                                    <li><i class="fab fa-jira"></i> Jira (Workflow Customization, Reporting, Integration)</li>
-                                    <li><i class="fas fa-book-open"></i> Confluence (Documentation Management, Integration with Jira)</li>
-                                    <li><i class="fas fa-balance-scale"></i> Agile Methodologies (Scrum)</li>
-                                    <li><i class="fas fa-stopwatch"></i> Sprint Planning, Retrospectives & Backlog Grooming</li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- AI and Machine Learning -->
-                <div class="col-md-6 mb-4">
-                    <div class="card skill-section">
-                        <button class="custom-skill-btn" type="button" data-toggle="collapse" data-target="#aiMLSkills" aria-expanded="false" aria-controls="aiMLSkills">
-                            <i class="fas fa-robot"></i> AI and Machine Learning
-                        </button>
-                        <div class="collapse" id="aiMLSkills">
-                            <div class="card-body">
-                                <ul class="list-unstyled">
-                                    <li><i class="fas fa-brain"></i> Large Language Models (LLMs) - Conversational AI & Natural Language Processing (NLP)</li>
-                                    <li><i class="fas fa-shield-virus"></i> Red Teaming on AI Systems - Multi-Agent Adversarial Simulations</li>
-                                    <li><i class="fas fa-chalkboard-teacher"></i> Supervised, Unsupervised, and Reinforcement Learning Algorithms</li>
-                                    <li><i class="fas fa-camera-retro"></i> Neural Networks for Image Recognition and Speech Analysis</li>
-                                    <li><i class="fas fa-solid fa-chart-area"></i> Predictive Analytics & Data-driven Model Training</li>
-                                    <li><i class="fas fa-users-cog"></i> AI Ethics & Bias Mitigation in Machine Learning Models</li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-    
-            </div>
-        </div>
-
-    </section>
-    
-
-<!-- Add this section below your existing sections -->
-<section id="control-passion" class="control-passion">
-    <div class="container">
-        <h2 class="section-header text-center mb-5">Why Control Systems Fascinate Me?</h2>
-        <div class="row">
-            <div class="col-md-6">
-                
-                <p>The world of control systems is where the elegance of mathematics merges with the dynamics of the real world, and I've been on an exciting journey of exploration ever since.</p>
-                
-                
-                <p>What really grabs me about control systems is how they're everywhere – from making industries run efficiently to guiding vehicles safely. But I'm not content with just bookish knowledge. I'm curious about seeing how these ideas play out in the real world.</p>
-
-                <p>I've covered a bunch of topics, from the basics like classical control theory, which forms the foundation of control strategies, to the more complex stuff like Model Predictive Control, a method for managing intricate processes. And finally PID Control that is much hated in the academia but is the simplest way to control systems without having information about their model.</p>
-
-                <p>State-Space Control felt like a new way of looking at things, where you smoothly switch between different modes. Robust Control caught my attention because it can keep things steady even when things get unpredictable. Adaptive Control, Optimal Control, and Nonlinear Control added depth to my understanding as I learned about adapting to changing situations, finding the best ways to manage things, and handling complex situations.</p>
-
-                <p>System Identification and Dynamic System Simulation let me predict and model how systems behave, kind of like seeing into the future. Embedded (Real-time) Control showed me how to apply these ideas practically, making devices and systems work efficiently and quickly.</p>
-
-                <p>With tools like Matlab & Simulink, I've had the chance to bring these theories to life by creating simulations. I find it incredibly satisfying to simulate systems and see how they work, all while ensuring the math behind it adds up just right. This hands-on aspect has not only deepened my passion for control systems but also enriched my understanding of how these concepts manifest in real-world scenarios.</p>
-
-                                
-            </div>
-            <div class="col-md-6">
-                <h4>      PID Control in Action</h4>
-                <div class="pid-gif">
-                    <!-- Replace this image source with the actual GIF of PID control in action -->
-                    <img src="PID_GIF.gif" alt="PID Control GIF">
-                </div>
-                <h4>Crazyflie trajectory tracking with infrared cameras</h4>
-            
-                    <iframe width="400" height="300"
-                    src="https://www.youtube.com/embed/X5SEyiHJuqA"
-                    title="YouTube video player" frameborder="0"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media;
-                    gyroscope; picture-in-picture;
-                    web-share"
-                    
-                    allowfullscreen></iframe>
-            
-            <h4>Drone fleet formation control on Simulink (Bachelor's thesis)</h4>
-            <div class="formation-control-container">
-                <!-- Replace this image source with the actual GIF of PID control in action -->
-                <img src="drone_control.gif" alt="PID Control GIF" class="drone-control">
-            </div>
-        </div>
-    </div>
-</section>
-
-
-<!-- Add this section below the "contact" section -->
-<section id="about-me" class="about-me">
-    <div class="container">
-        <h2 class="section-header text-center mb-5">About Me</h2>
-        <div class="row">
-            <div class="col-md-6">
-                <h4>Hobbies and Interests</h4>
-                <ul>
-                    <li>Chess - Feel free to challenge me on <a href="https://lichess.org/@/omrnuki" target="_blank">Lichess</a> and <a href="https://www.chess.com/member/omrnuki" target="_blank">Chess.com</a></li>
-                    <li>Robotics</li>
-                    <li>3D Printing - Check out my project video!</li>
-                    <li>Gardening</li>
-                    <li>Cars, bikes and anything with a motor</li>
-                    <li>Rubik's cube</li>
-                    <li>DIY</li>
-                    <li>Trekking and mountains</li>
-                    <li>Enduro Cross</li>
-                    <li>Running & Gym</li>
-                </ul>
-            </div>
-            <div class="col-md-6">
-                <h4>1:525 gear ratio experiment</h4>
-                <div class="lichess-puzzle">
-                    <!-- Replace the iframe source with the actual Lichess puzzle -->
-                    <iframe width="560" height="315" src="https://youtube.com/embed/Qgbeii4Fpx4" frameborder="0" allowfullscreen></iframe>
-                </div>
-        </div>
-        <div class="row mt-4">
-            <div class="col-md-6">
-                <h4>The Immortal Game</h4>
-                <div class="video-container">
-                    <!-- Replace the iframe source with the actual YouTube video -->
-                    <iframe width="100%" height="450" src="https://lichess.org/study/embed/imArXf5B/7Vuj4Ozi" frameborder="0"></iframe>
-                </div>
-            </div>
-            <div class="col-md-6">
-                <div class="picture-container">
-                    <h4>A Ride With a View</h4>
-                    <!-- Add your picture here -->
-                    <img src="moto.jpg" alt="moto" class="picture">
-                </div>
-            </div>
-        </div>
-        
-</section>
-
-<section id="contact" class="contact">
-    <div class="container">
-        <h2 class="section-header text-center mb-5">Contact Me</h2>
-        <div class="row">
-            <div class="col-md-6">
-                <h4>Let's Get in Touch</h4>
-                <p>
-                    If you'd like to collaborate on a project or just say hello, feel free to reach out to me.
-                </p>
-            </div>
-            <div class="col-md-6">
-                <h4>Contact Information</h4>
-                <ul class="list-unstyled">
-                    <li><i class="fas fa-envelope"></i> Email: moukawimomar@gmail.com</li>
-                    <li><i class="fas fa-phone"></i> Phone: +39</li>
-                    <li><i class="fas fa-map-marker-alt"></i> Location: L'Aquila, Italy</li>
+            <a class="navbar-brand fw-bold" href="#">OMAR MOUKAWIM</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="#home">Overview</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#experience">Experience</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#engineering">Engineering</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#strategy">Strategy</a></li>
                 </ul>
             </div>
         </div>
-    </div>
-</section>
+    </nav>
 
-    <footer class="bg-dark text-white py-3">
-        <div class="container text-center">
-            <p>&copy; 2024 Omar Moukawim. All rights reserved.</p>
+    <section id="home" class="hero-section">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-8 order-2 order-lg-1">
+                    <h1 class="display-4 fw-bold text-white mb-3">Cybersecurity Engineer</h1>
+                    <p class="lead text-light-gray mb-4" style="max-width: 700px;">
+                        Cybersecurity professional specializing in AI-driven platforms and Red Team operations. 
+                        Adept at defining technical strategy and managing the development lifecycle of advanced security solutions.
+                    </p>
+                    <div class="d-flex flex-wrap gap-3">
+                        <div class="feature-tag"><i class="fas fa-shield-alt me-2"></i>Red Teaming</div>
+                        <div class="feature-tag"><i class="fas fa-robot me-2"></i>AI Security</div>
+                        <div class="feature-tag"><i class="fas fa-car me-2"></i>Automotive Security</div>
+                    </div>
+                </div>
+                <div class="col-lg-4 order-1 order-lg-2 mb-4 mb-lg-0 text-center">
+                    <img src="foto_sito.jpg" alt="Omar Moukawim" class="profile-img shadow-lg">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="experience" class="section-padding bg-surface">
+        <div class="container">
+            <div class="row mb-5">
+                <div class="col-lg-12">
+                    <h2 class="section-title">Professional Experience</h2>
+                </div>
+            </div>
+            <div class="timeline-container" id="work-timeline">
+                </div>
+        </div>
+    </section>
+
+    <section id="projects" class="section-padding">
+        <div class="container">
+            <div class="d-flex justify-content-between align-items-end mb-5">
+                <div>
+                    <h2 class="section-title">Technical Projects</h2>
+                    <p class="text-light-gray mb-0">Open source contributions synced from GitHub.</p>
+                </div>
+                <a href="https://github.com/omarmoukawim" target="_blank" class="btn btn-outline-light btn-sm">
+                    View GitHub <i class="fab fa-github ms-2"></i>
+                </a>
+            </div>
+            
+            <div class="row g-4" id="project-list">
+                <div class="col-12 text-center py-5">
+                    <div class="spinner-border text-primary" role="status">
+                        <span class="visually-hidden">Loading...</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="engineering" class="section-padding bg-surface">
+        <div class="container">
+            <div class="row mb-5">
+                <div class="col-lg-12">
+                    <h2 class="section-title">Hobbies</h2>
+                    <p class="text-light-gray">Mechanical prototyping and motors.</p>
+                </div>
+            </div>
+            <div class="row g-4 align-items-stretch">
+                <div class="col-lg-6">
+                    <div class="card h-100 bg-card border-secondary text-white shadow-sm" style="background-color: var(--bg-card); border-color: var(--border-color);">
+                        <div class="card-body p-4">
+                            <div class="d-flex align-items-center mb-3">
+                                <i class="fas fa-cogs fa-2x text-primary me-3"></i>
+                                <h3 class="h4 mb-0">Mechanical Prototyping</h3>
+                            </div>
+                            <h5 class="card-title text-white">1:525 Reduction Gearbox</h5>
+                            <p class="card-text text-light-gray mb-4">
+                                Design and fabrication of a high-ratio reduction gearbox. MODELED in <strong>Fusion 360</strong> and manufactured using FDM 3D printing, this project analyzes mechanical advantage and manufacturing tolerances in complex gear trains.
+                            </p>
+                            <div class="ratio ratio-16x9 rounded overflow-hidden border border-secondary">
+                                <iframe src="https://www.youtube.com/embed/Qgbeii4Fpx4" title="Gear Ratio Project" allowfullscreen></iframe>
+                            </div>
+                            <div class="mt-3 text-end">
+                                <a href="https://github.com/omarmoukawim/1-525-gear-ratio" target="_blank" class="text-primary text-decoration-none small">
+                                    View CAD Files <i class="fas fa-arrow-right ms-1"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-6">
+                    <div class="card h-100 bg-card border-secondary text-white shadow-sm" style="background-color: var(--bg-card); border-color: var(--border-color);">
+                        <div class="row g-0 h-100">
+                            <div class="col-md-12">
+                                <img src="moto.jpg" class="img-fluid rounded-top w-100" alt="Enduro Motorcycle" style="height: 300px; object-fit: cover;">
+                            </div>
+                            <div class="col-md-12">
+                                <div class="card-body p-4 d-flex flex-column h-100">
+                                    <div class="d-flex align-items-center mb-3">
+                                        <i class="fas fa-motorcycle fa-2x text-primary me-3"></i>
+                                        <h3 class="h4 mb-0">Automotive Mechanics</h3>
+                                    </div>
+                                    <p class="card-text text-light-gray">
+                                        Practical experience with internal combustion engines and vehicle maintenance.
+                                    </p>
+                                    <p class="card-text text-light-gray">
+                                        Hands-on work with off-road vehicles provides physical context for digital automotive security systems, grounding theoretical concepts in mechanical reality.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="strategy" class="section-padding">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-5 mb-4 mb-lg-0">
+                    <h2 class="section-title">Strategic Analysis</h2>
+                    <p class="text-light-gray mb-4">
+                        Effective cybersecurity requires anticipating adversarial moves and managing risk. 
+                        Below is an analysis of "The Immortal Game," illustrating the importance of position and strategy over material gain.
+                    </p>
+                    <div class="p-3 bg-darker rounded border border-dark-subtle mb-3">
+                        <div class="d-flex align-items-center">
+                            <i class="fas fa-chess-king fa-2x text-primary me-3"></i>
+                            <div>
+                                <h5 class="mb-1 text-white">Lichess Profile</h5>
+                                <a href="https://lichess.org/@/omrnuki" target="_blank" class="text-primary text-decoration-none">
+                                    lichess.org/@/omrnuki <i class="fas fa-external-link-alt fa-xs ms-1"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-7">
+                    <div class="ratio ratio-16x9 shadow rounded border border-secondary">
+                        <iframe 
+                            src="https://lichess.org/study/embed/imArXf5B/7Vuj4Ozi?theme=auto&bg=dark" 
+                            allowtransparency="true" 
+                            frameborder="0"
+                            title="The Immortal Game">
+                        </iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer id="contact" class="py-5 bg-black border-top border-dark-subtle">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-md-6 mb-3 mb-md-0">
+                    <h5 class="text-white mb-2">Omar Moukawim</h5>
+                    <p class="text-light mb-0 small">Chieti / L'Aquila, Italy</p>
+                    <a href="mailto:moukawimomar@gmail.com" class="text-white text-decoration-none mt-2 d-inline-block fw-bold" style="border-bottom: 1px solid #fff;">
+                        moukawimomar@gmail.com
+                    </a>
+                </div>
+                <div class="col-md-6 text-md-end">
+                    <a href="https://linkedin.com/in/omarmoukawim" class="text-white me-3 fs-5"><i class="fab fa-linkedin"></i></a>
+                    <a href="https://github.com/omarmoukawim" class="text-white fs-5"><i class="fab fa-github"></i></a>
+                </div>
+            </div>
         </div>
     </footer>
 
-    <button id="back-to-top-button" class="back-to-top-button">
-        <i class="fas fa-chevron-up"></i>
-    </button>
-
-
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <script src="scripts.js"></script>
 </body>
 </html>
-
